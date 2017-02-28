@@ -1,17 +1,6 @@
 /*page custom css*/
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    -webkit-text-size-adjust: 100%;
-    background: #fff;
-    color: #333;
-    font-weight: normal;
-    font-style: normal;
-    cursor: default;
-    font-size: 16px;
     overflow-x: hidden;
 }
 
@@ -20,7 +9,7 @@ body {
 
 .business-header {
     height: 250px;
-    background: url('../images/header.jpg') center center no-repeat scroll;
+    background: url('../images/header.jpg') center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
