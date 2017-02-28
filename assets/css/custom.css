@@ -1,0 +1,401 @@
+
+/*page custom css*/
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  color: #333;
+  font-weight: normal;
+  font-style: normal;
+  cursor: default;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+.business-header {
+    height: 250px;
+    background: url('../images/header.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    line-height: 250px;
+}
+
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+    border-top:1px solid #f6f6f6;
+}
+.sidebar-nav li:last-child{
+    border-bottom: 1px solid #f6f6f6;
+} 
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-nav li a:first-child {
+    font-weight: bold;
+    color: #fff;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #333;
+    background:#fff;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+.navbar-toggle{
+    float: left;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 1px;
+}
+.home-tiles{
+    padding:5px;
+}
+/* panel design */
+.home-tiles .custom-tile{
+    border-style: none;
+    border-width: 0;
+    border-color: #dbdbdb;
+    padding: 24px;
+    background: #f6f6f6;
+    height: 150px;
+    color:#fff;
+    margin-bottom:5px;
+}
+.home-tiles .row .col-xs-6{
+  width:45%;
+}
+.home-tiles .row .col-xs-6:first-child{
+    padding-right:3px;
+}
+
+.home-tiles .row .col-xs-6:last-child{
+    padding-left:3px;
+}
+
+.table-cell{
+    display:table-cell;
+}
+
+.disp-table{
+    display:table;
+}
+/* helper classes for page */
+.text-center{
+    text-align:center;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.clear {
+  clear: both !important;
+}
+
+.clear-left {
+  clear: left !important;
+}
+
+.clear-right {
+  clear: right !important;
+}
+
+.clear-none {
+  clear: none !important;
+}
+
+.float-reset,
+.float-none {
+  float: none !important;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.vert-top {
+  vertical-align: top;
+}
+
+.vert-text-top {
+  vertical-align: text-top;
+}
+
+.vert-middle {
+  vertical-align: middle;
+}
+
+.vert-bottom {
+  vertical-align: bottom;
+}
+
+.vert-text-bottom {
+  vertical-align: text-bottom;
+}
+
+.center {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.uncenter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.static {
+  position: static;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.border-all {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #959595;
+}
+
+.border-none {
+  border: none !important;
+  border-color: #959595;
+}
+
+.border-top {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: #959595;
+}
+
+.border-right {
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  border-right-color: #959595;
+}
+
+.border-bottom {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #959595;
+}
+
+.border-left {
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: #959595;
+}
+
+.border-hoirz {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: #959595;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #959595;
+}
+
+.border-vert {
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: #959595;
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  border-right-color: #959595;
+}
+
+.border-top-none {
+  border-top: none !important;
+}
+
+.border-right-none {
+  border-right: none !important;
+}
+
+.border-bottom-none {
+  border-bottom: none !important;
+}
+
+.border-left-none {
+  border-left: none !important;
+}
+
+.border-all-none {
+  border: none !important;
+}
+
+/*background colors*/
+.bg-brand-1{
+    background-color:#cc2b2b !important; 
+}
+.bg-grey-1{
+    background-color:#888888; 
+}
+
+.text-brand-1{
+    color:#cc2b2b !important;
+}
+.bold{
+    font-weight: bold;
+}
+.text-small{
+    font-size:12px;
+}
+.text-large{
+    font-size:24px;
+}
+.glyphicons-temple-hindu:before{
+    content: "\e305";
+}
