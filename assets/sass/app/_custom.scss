@@ -1,0 +1,173 @@
+/*page custom css*/
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    background: #fff;
+    color: #333;
+    font-weight: normal;
+    font-style: normal;
+    cursor: default;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    height: 250px;
+    background: url('../images/header.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    .tagline {
+        text-shadow: 0 0 10px #000;
+        color: #fff;
+        line-height: 250px;
+    }
+}
+
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        text-indent: 20px;
+        line-height: 40px;
+        border-top: 1px solid #f6f6f6;
+        &:last-child {
+            border-bottom: 1px solid #f6f6f6;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            &:first-child {
+                font-weight: bold;
+                color: #fff;
+            }
+            &:hover {
+                text-decoration: none;
+                color: #333;
+                background: #fff;
+            }
+
+            &:active, &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    .sidebar-brand {
+        height: 65px;
+        font-size: 18px;
+        line-height: 60px;
+        a {
+            color: #999999;
+            &:hover {
+                color: #fff;
+                background: none;
+            }
+        }
+    }
+}
+
+.navbar-toggle {
+    float: left;
+    .icon-bar {
+        background-color: #fff;
+        display: block;
+        width: 25px;
+        height: 3px;
+        border-radius: 1px;
+    }
+}
+
+.home-tiles {
+    padding: 5px;
+    .custom-tile {
+        border-style: none;
+        border-width: 0;
+        border-color: #dbdbdb;
+        padding: 24px;
+        background: #f6f6f6;
+        height: 150px;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .row {
+        .col-xs-6{
+            &:first-child{
+                 padding-right: 3px;
+            }
+            &:last-child{
+                padding-left: 3px;
+            }
+        }
+    }
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.disp-table {
+    display: table;
+}

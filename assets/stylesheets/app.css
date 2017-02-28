@@ -1,0 +1,528 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*page custom css*/
+/* line 3, ../sass/app/_custom.scss */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  color: #333;
+  font-weight: normal;
+  font-style: normal;
+  cursor: default;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+/* line 21, ../sass/app/_custom.scss */
+.business-header {
+  height: 250px;
+  background: url("../images/header.jpg") center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+/* line 28, ../sass/app/_custom.scss */
+.business-header .tagline {
+  text-shadow: 0 0 10px #000;
+  color: #fff;
+  line-height: 250px;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+/* Toggle Styles */
+/* line 41, ../sass/app/_custom.scss */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 49, ../sass/app/_custom.scss */
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+/* line 53, ../sass/app/_custom.scss */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 68, ../sass/app/_custom.scss */
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+/* line 72, ../sass/app/_custom.scss */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+}
+
+/* line 77, ../sass/app/_custom.scss */
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+/* line 85, ../sass/app/_custom.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 92, ../sass/app/_custom.scss */
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+  border-top: 1px solid #f6f6f6;
+}
+/* line 96, ../sass/app/_custom.scss */
+.sidebar-nav li:last-child {
+  border-bottom: 1px solid #f6f6f6;
+}
+/* line 99, ../sass/app/_custom.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 103, ../sass/app/_custom.scss */
+.sidebar-nav li a:first-child {
+  font-weight: bold;
+  color: #fff;
+}
+/* line 107, ../sass/app/_custom.scss */
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+}
+/* line 113, ../sass/app/_custom.scss */
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+/* line 118, ../sass/app/_custom.scss */
+.sidebar-nav .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+/* line 122, ../sass/app/_custom.scss */
+.sidebar-nav .sidebar-brand a {
+  color: #999999;
+}
+/* line 124, ../sass/app/_custom.scss */
+.sidebar-nav .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+/* line 132, ../sass/app/_custom.scss */
+.navbar-toggle {
+  float: left;
+}
+/* line 134, ../sass/app/_custom.scss */
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+  display: block;
+  width: 25px;
+  height: 3px;
+  border-radius: 1px;
+}
+
+/* line 143, ../sass/app/_custom.scss */
+.home-tiles {
+  padding: 5px;
+}
+/* line 145, ../sass/app/_custom.scss */
+.home-tiles .custom-tile {
+  border-style: none;
+  border-width: 0;
+  border-color: #dbdbdb;
+  padding: 24px;
+  background: #f6f6f6;
+  height: 150px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+/* line 157, ../sass/app/_custom.scss */
+.home-tiles .row .col-xs-6:first-child {
+  padding-right: 3px;
+}
+/* line 160, ../sass/app/_custom.scss */
+.home-tiles .row .col-xs-6:last-child {
+  padding-left: 3px;
+}
+
+/* line 167, ../sass/app/_custom.scss */
+.table-cell {
+  display: table-cell;
+}
+
+/* line 171, ../sass/app/_custom.scss */
+.disp-table {
+  display: table;
+}
+
+/* helper classes for page */
+/* line 3, ../sass/app/_helper.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 7, ../sass/app/_helper.scss */
+.left {
+  float: left !important;
+}
+
+/* line 11, ../sass/app/_helper.scss */
+.right {
+  float: right !important;
+}
+
+/* line 15, ../sass/app/_helper.scss */
+.clear {
+  clear: both !important;
+}
+
+/* line 19, ../sass/app/_helper.scss */
+.clear-left {
+  clear: left !important;
+}
+
+/* line 23, ../sass/app/_helper.scss */
+.clear-right {
+  clear: right !important;
+}
+
+/* line 27, ../sass/app/_helper.scss */
+.clear-none {
+  clear: none !important;
+}
+
+/* line 31, ../sass/app/_helper.scss */
+.float-reset,
+.float-none {
+  float: none !important;
+}
+
+/* line 36, ../sass/app/_helper.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 40, ../sass/app/_helper.scss */
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 45, ../sass/app/_helper.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 49, ../sass/app/_helper.scss */
+.text-left {
+  text-align: left !important;
+}
+
+/* line 53, ../sass/app/_helper.scss */
+.text-right {
+  text-align: right !important;
+}
+
+/* line 57, ../sass/app/_helper.scss */
+.text-center {
+  text-align: center !important;
+}
+
+/* line 61, ../sass/app/_helper.scss */
+.text-justify {
+  text-align: justify !important;
+}
+
+/* line 65, ../sass/app/_helper.scss */
+.vert-top {
+  vertical-align: top;
+}
+
+/* line 69, ../sass/app/_helper.scss */
+.vert-text-top {
+  vertical-align: text-top;
+}
+
+/* line 73, ../sass/app/_helper.scss */
+.vert-middle {
+  vertical-align: middle;
+}
+
+/* line 77, ../sass/app/_helper.scss */
+.vert-bottom {
+  vertical-align: bottom;
+}
+
+/* line 81, ../sass/app/_helper.scss */
+.vert-text-bottom {
+  vertical-align: text-bottom;
+}
+
+/* line 85, ../sass/app/_helper.scss */
+.center {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* line 91, ../sass/app/_helper.scss */
+.uncenter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 96, ../sass/app/_helper.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 100, ../sass/app/_helper.scss */
+.block {
+  display: block;
+}
+
+/* line 104, ../sass/app/_helper.scss */
+.inline {
+  display: inline;
+}
+
+/* line 108, ../sass/app/_helper.scss */
+.hide {
+  display: none;
+}
+
+/* line 112, ../sass/app/_helper.scss */
+.relative {
+  position: relative;
+}
+
+/* line 116, ../sass/app/_helper.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 120, ../sass/app/_helper.scss */
+.static {
+  position: static;
+}
+
+/* line 124, ../sass/app/_helper.scss */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* line 128, ../sass/app/_helper.scss */
+.border-all {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #959595;
+}
+
+/* line 134, ../sass/app/_helper.scss */
+.border-none {
+  border: none !important;
+  border-color: #959595;
+}
+
+/* line 139, ../sass/app/_helper.scss */
+.border-top {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: #959595;
+}
+
+/* line 145, ../sass/app/_helper.scss */
+.border-right {
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  border-right-color: #959595;
+}
+
+/* line 151, ../sass/app/_helper.scss */
+.border-bottom {
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #959595;
+}
+
+/* line 157, ../sass/app/_helper.scss */
+.border-left {
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: #959595;
+}
+
+/* line 163, ../sass/app/_helper.scss */
+.border-hoirz {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: #959595;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #959595;
+}
+
+/* line 172, ../sass/app/_helper.scss */
+.border-vert {
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: #959595;
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  border-right-color: #959595;
+}
+
+/* line 181, ../sass/app/_helper.scss */
+.border-top-none {
+  border-top: none !important;
+}
+
+/* line 185, ../sass/app/_helper.scss */
+.border-right-none {
+  border-right: none !important;
+}
+
+/* line 189, ../sass/app/_helper.scss */
+.border-bottom-none {
+  border-bottom: none !important;
+}
+
+/* line 193, ../sass/app/_helper.scss */
+.border-left-none {
+  border-left: none !important;
+}
+
+/* line 197, ../sass/app/_helper.scss */
+.border-all-none {
+  border: none !important;
+}
+
+/*background colors*/
+/* line 204, ../sass/app/_helper.scss */
+.bg-brand-1 {
+  background-color: #cc2b2b !important;
+}
+
+/* line 208, ../sass/app/_helper.scss */
+.bg-grey-1 {
+  background-color: #888888;
+}
+
+/* line 212, ../sass/app/_helper.scss */
+.text-brand-1 {
+  color: #cc2b2b !important;
+}
+
+/* line 216, ../sass/app/_helper.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 220, ../sass/app/_helper.scss */
+.text-small {
+  font-size: 12px;
+}
+
+/* line 224, ../sass/app/_helper.scss */
+.text-large {
+  font-size: 24px;
+}
