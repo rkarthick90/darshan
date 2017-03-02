@@ -216,6 +216,22 @@ body {
   height: 35px;
 }
 
+/* line 207, ../sass/app/_custom.scss */
+.padding-all-zero {
+  padding: 0;
+}
+
+/* line 211, ../sass/app/_custom.scss */
+.navbar-title {
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
 /* helper classes for page */
 /* line 2, ../sass/app/_helper.scss */
 .left {

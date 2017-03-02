@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <!-- Custom CSS -->
     <link href="../assets/stylesheets/app.css" rel="stylesheet">
 
@@ -25,14 +27,25 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"> Prasad Online </a>
+            <div class="row">
+                <div class="col-xs-2 padding-all-zero">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-xs-8 padding-all-zero">
+                    <div class="navbar-title"> Prasad Online </div>
+                </div>
+                <div class="col-xs-2 padding-all-zero">
+                    <div class="m_nav-bar">
+                         <span class="vert-middle">1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
