@@ -33,7 +33,7 @@ $(document).ready(function(){
 });
 
 function pageRedirect(arg){
-    switch(temp){
+    switch(arg){
         case 'menu':
             location.href = 'pages/menu.html';
             break;

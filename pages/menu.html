@@ -12,7 +12,9 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <!-- side bar -->
-    <link href="../node_modules/bootstrap-sidebar/dist/css/sidebar.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+
     <!-- Custom CSS -->
     <link href="../assets/stylesheets/app.css" rel="stylesheet">
 
@@ -25,6 +27,16 @@
 </head>
 
 <body>
+    <div class="navmenu navmenu-default navmenu-fixed-right">
+        <a class="navmenu-brand" href="#">Project name</a>
+        <ul class="nav navmenu-nav">
+            <li><a href="../navmenu/">Slide in</a></li>
+            <li><a href="../navmenu-push/">Push</a></li>
+            <li class="active"><a href="./">Reveal</a></li>
+            <li><a href="../navbar-offcanvas/">Off canvas navbar</a></li>
+        </ul>
+    </div>
+    <div class="canvas">
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -44,8 +56,8 @@
                     <div class="navbar-title"> Prasad Online </div>
                 </div>
                 <div class="col-xs-2 padding-all-zero">
-                    <div class="m_nav-bar" >
-                         <span class="vert-middle">1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle" aria-hidden="true"></i>
+                    <div class="m_nav-bar navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+                        <span class="vert-middle">1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -69,9 +81,9 @@
     </nav>
 
     <div class="container m_btntab menucont">
-        <div class="btn-group btn-group-justified"> 
-            <a href="#" class="btn btn-default active" role="button" data-tab-btn="services">Services</a> 
-            <a href="#" class="btn btn-default" role="button" data-tab-btn="quickpay">Quick Pay</a>            
+        <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-default active" role="button" data-tab-btn="services">Services</a>
+            <a href="#" class="btn btn-default" role="button" data-tab-btn="quickpay">Quick Pay</a>
         </div>
     </div>
     <div class="tabcontent">
@@ -89,14 +101,14 @@
                 <div class="row">
                     <div class="col-xs-12 m_both">
                         <div class="tile bg-temple disp-table collapsed" data-toggle="collapse" data-target="#donation-sub">
-                            <h3 class="title table-cell vert-middle"> DONATION  
+                            <h3 class="title table-cell vert-middle"> DONATION
                                 <span class="glyphicon glyphicon-chevron-up block margin-top-small text-xlarge"></span>
                             </h3>
                         </div>
                     </div>
                     <div class="sub-tiles collapse" id="donation-sub">
                         <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION  1 </h3>
+                            <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
                         </div>
                         <div class="tile tile-small bg-temple disp-table" data-sub-tile>
                             <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
@@ -106,14 +118,14 @@
                 <div class="row">
                     <div class="col-xs-12 m_both">
                         <div class="tile orange disp-table collapsed" data-toggle="collapse" data-target="#aradhan-sub">
-                            <h3 class="title table-cell vert-middle"> ARADHAN  
+                            <h3 class="title table-cell vert-middle"> ARADHAN
                                 <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
                             </h3>
                         </div>
                     </div>
                     <div class="sub-tiles collapse" id="aradhan-sub">
                         <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN  1 </h3>
+                            <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
                         </div>
                         <div class="tile tile-small orange disp-table" data-sub-tile>
                             <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
@@ -123,7 +135,7 @@
                 <div class="row">
                     <div class="col-xs-12 m_both">
                         <div class="tile purple disp-table collapsed" data-toggle="collapse" data-target="#prasad-sub">
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING  
+                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING
                                 <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
                             </h3>
                         </div>
@@ -153,31 +165,31 @@
                 <div class="row">
                     <div class="col-xs-12 m_both">
                         <div class="tile orange disp-table collapsed" data-toggle="collapse" data-target="#donation-sub1">
-                            <h3 class="title table-cell vert-middle"> DONATION  
+                            <h3 class="title table-cell vert-middle"> DONATION
                                 <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
                             </h3>
                         </div>
                     </div>
                     <div class="sub-tiles collapse" id="donation-sub1">
                         <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION  1 </h3>
+                            <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
                         </div>
                         <div class="tile tile-small orange disp-table" data-sub-tile>
                             <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
                         </div>
                     </div>
                 </div>
-                 <div class="row">
+                <div class="row">
                     <div class="col-xs-12 m_both">
                         <div class="tile bg-temple disp-table collapsed" data-toggle="collapse" data-target="#aradhan-sub1">
-                            <h3 class="title table-cell vert-middle"> ARADHAN  
+                            <h3 class="title table-cell vert-middle"> ARADHAN
                                 <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
                             </h3>
                         </div>
                     </div>
                     <div class="sub-tiles collapse" id="aradhan-sub1">
                         <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN  1 </h3>
+                            <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
                         </div>
                         <div class="tile tile-small bg-temple disp-table" data-sub-tile>
                             <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
@@ -187,7 +199,7 @@
                 <div class="row">
                     <div class="col-xs-12 m_both">
                         <div class="tile purple disp-table collapsed" data-toggle="collapse" data-target="#prasad-sub1">
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING  
+                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING
                                 <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
                             </h3>
                         </div>
@@ -204,13 +216,14 @@
             </div>
         </div>
     </div>
-
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/bootstrap/js/tab.js"></script>
-
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
 </body>
 

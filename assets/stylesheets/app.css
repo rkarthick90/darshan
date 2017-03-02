@@ -199,29 +199,32 @@ body {
   margin-top: 10px;
   font-size: 18px;
   color: #fff;
+  margin: 0;
+  border: none;
+  background: none;
 }
 
-/* line 195, ../sass/app/_custom.scss */
+/* line 198, ../sass/app/_custom.scss */
 .navbar-fixed-bottom {
   height: 55px;
 }
 
-/* line 199, ../sass/app/_custom.scss */
+/* line 202, ../sass/app/_custom.scss */
 .form-group {
   margin-bottom: 0;
   margin-top: 5px;
 }
-/* line 202, ../sass/app/_custom.scss */
+/* line 205, ../sass/app/_custom.scss */
 .form-group #exampleInputAmount {
   height: 35px;
 }
 
-/* line 207, ../sass/app/_custom.scss */
+/* line 210, ../sass/app/_custom.scss */
 .padding-all-zero {
   padding: 0;
 }
 
-/* line 211, ../sass/app/_custom.scss */
+/* line 214, ../sass/app/_custom.scss */
 .navbar-title {
   height: 50px;
   padding: 15px 15px;
@@ -232,6 +235,41 @@ body {
   color: #fff;
 }
 
+/* line 224, ../sass/app/_custom.scss */
+.navmenu {
+  z-index: 1;
+}
+
+/* line 228, ../sass/app/_custom.scss */
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+
+@media (min-width: 0) {
+  /* line 238, ../sass/app/_custom.scss */
+  .navbar-toggle {
+    display: block;
+    /* force showing the toggle */
+  }
+}
+@media (min-width: 992px) {
+  /* line 244, ../sass/app/_custom.scss */
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+
+  /* line 249, ../sass/app/_custom.scss */
+  .canvas {
+    padding: 0;
+  }
+}
 /* helper classes for page */
 /* line 2, ../sass/app/_helper.scss */
 .left {

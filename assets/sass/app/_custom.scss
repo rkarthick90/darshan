@@ -190,6 +190,9 @@ body {
     margin-top:10px;
     font-size:18px;
     color:#fff;
+    margin:0;
+    border:none;
+    background: none;
 }
 
 .navbar-fixed-bottom{
@@ -216,4 +219,34 @@ body {
     text-align: center;
     font-weight: bold;
     color: $color_white;
+}
+
+.navmenu {
+  z-index: 1;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+  .canvas {
+    padding: 0;
+  }
 }
