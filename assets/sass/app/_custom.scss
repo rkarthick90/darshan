@@ -7,7 +7,7 @@ $color_blue: #2672EC;
 $color_white: #fff;
 $color_black: #333;
 // colors from http://www.creepyed.com/2012/09/windows-8-colors-hex-code/
-$base_font_size: 14px;
+$base_font_size: 16px;
 $base_line_height: 1.5em;
 $text_font_family: 'Open Sans',
 "Segoe UI",
@@ -125,6 +125,7 @@ body {
 }
 .details-panel{
     background: url('../images/donation.png') center center no-repeat;
+    height: 200px;
 }
 
 .table-cell {
@@ -181,5 +182,24 @@ body {
         &:before{
             content: '\e114';
         }
+    }
+}
+
+/*customized top bar */
+.m_nav-bar{
+    margin-top:10px;
+    font-size:18px;
+    color:#fff;
+}
+
+.navbar-fixed-bottom{
+    height: 55px;
+}
+
+.form-group{
+    margin-bottom: 0;
+    margin-top:5px;
+    #exampleInputAmount{
+        height: 35px;
     }
 }

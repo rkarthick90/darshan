@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
   padding-top: 50px;
   font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5em;
   font-weight: 400;
 }
@@ -120,43 +120,44 @@ body {
 /* line 126, ../sass/app/_custom.scss */
 .details-panel {
   background: url("../images/donation.png") center center no-repeat;
+  height: 200px;
 }
 
-/* line 130, ../sass/app/_custom.scss */
+/* line 131, ../sass/app/_custom.scss */
 .table-cell {
   display: table-cell;
 }
 
-/* line 134, ../sass/app/_custom.scss */
+/* line 135, ../sass/app/_custom.scss */
 .disp-table {
   display: table;
 }
 
-/* line 137, ../sass/app/_custom.scss */
+/* line 138, ../sass/app/_custom.scss */
 .tiles-cont {
   padding-top: 15px;
 }
-/* line 139, ../sass/app/_custom.scss */
+/* line 140, ../sass/app/_custom.scss */
 .tiles-cont .m_left {
   padding-right: 3px;
 }
-/* line 142, ../sass/app/_custom.scss */
+/* line 143, ../sass/app/_custom.scss */
 .tiles-cont .m_right {
   padding-left: 3px;
 }
-/* line 145, ../sass/app/_custom.scss */
+/* line 146, ../sass/app/_custom.scss */
 .tiles-cont .m_both {
   padding-right: 3px;
   padding-left: 3px;
 }
 
-/* line 150, ../sass/app/_custom.scss */
+/* line 151, ../sass/app/_custom.scss */
 .m_btntab {
   padding: 0;
   position: fixed;
   z-index: 10;
 }
-/* line 154, ../sass/app/_custom.scss */
+/* line 155, ../sass/app/_custom.scss */
 .m_btntab .btn {
   padding: 14px 12px !important;
   font-size: 16px;
@@ -166,30 +167,53 @@ body {
   border-color: #333;
   border-radius: 0;
 }
-/* line 162, ../sass/app/_custom.scss */
+/* line 163, ../sass/app/_custom.scss */
 .m_btntab .btn.active {
   background-color: #d9534f;
   border-color: #d9534f;
 }
 
-/* line 169, ../sass/app/_custom.scss */
+/* line 170, ../sass/app/_custom.scss */
 .text-white {
   color: #fff;
 }
 
-/* line 173, ../sass/app/_custom.scss */
+/* line 174, ../sass/app/_custom.scss */
 .margin-top-small {
   margin-top: 24px !important;
 }
 
-/* line 176, ../sass/app/_custom.scss */
+/* line 177, ../sass/app/_custom.scss */
 .tabcontent {
   margin-top: 50px;
 }
 
-/* line 181, ../sass/app/_custom.scss */
+/* line 182, ../sass/app/_custom.scss */
 .collapsed .glyphicon-chevron-up:before {
   content: '\e114';
+}
+
+/*customized top bar */
+/* line 189, ../sass/app/_custom.scss */
+.m_nav-bar {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* line 195, ../sass/app/_custom.scss */
+.navbar-fixed-bottom {
+  height: 55px;
+}
+
+/* line 199, ../sass/app/_custom.scss */
+.form-group {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+/* line 202, ../sass/app/_custom.scss */
+.form-group #exampleInputAmount {
+  height: 35px;
 }
 
 /* helper classes for page */
@@ -457,7 +481,7 @@ body {
 
 /* line 218, ../sass/app/_helper.scss */
 .text-normal {
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 
 /* line 222, ../sass/app/_helper.scss */
@@ -631,4 +655,143 @@ body {
 /* line 361, ../sass/app/_helper.scss */
 .p-auto {
   width: auto !important;
+}
+
+/* line 1, ../sass/app/_checkbox.scss */
+.checkbox {
+  padding-left: 20px;
+}
+
+/* line 5, ../sass/app/_checkbox.scss */
+.checkbox label {
+  display: inline-block;
+  position: relative;
+  padding-left: 5px;
+}
+
+/* line 11, ../sass/app/_checkbox.scss */
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 2px;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+/* line 28, ../sass/app/_checkbox.scss */
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  color: #555555;
+  left: 0;
+  bottom: 10px;
+  font-size: 14px;
+}
+
+/* line 42, ../sass/app/_checkbox.scss */
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+/* line 46, ../sass/app/_checkbox.scss */
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 52, ../sass/app/_checkbox.scss */
+.checkbox input[type="checkbox"]:checked + label::after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+/* line 57, ../sass/app/_checkbox.scss */
+.checkbox input[type="checkbox"]:disabled + label {
+  opacity: 0.65;
+}
+
+/* line 61, ../sass/app/_checkbox.scss */
+.checkbox input[type="checkbox"]:disabled + label::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+
+/* line 66, ../sass/app/_checkbox.scss */
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+
+/* line 70, ../sass/app/_checkbox.scss */
+.checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
+/* line 74, ../sass/app/_checkbox.scss */
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+/* line 79, ../sass/app/_checkbox.scss */
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+/* line 83, ../sass/app/_checkbox.scss */
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+/* line 88, ../sass/app/_checkbox.scss */
+.checkbox-danger input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+/* line 92, ../sass/app/_checkbox.scss */
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+/* line 97, ../sass/app/_checkbox.scss */
+.checkbox-info input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+/* line 101, ../sass/app/_checkbox.scss */
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+/* line 106, ../sass/app/_checkbox.scss */
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+
+/* line 110, ../sass/app/_checkbox.scss */
+.checkbox-success input[type="checkbox"]:checked + label::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+/* line 115, ../sass/app/_checkbox.scss */
+.checkbox-success input[type="checkbox"]:checked + label::after {
+  color: #fff;
 }
