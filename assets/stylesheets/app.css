@@ -3,26 +3,23 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*page custom css*/
-/* line 3, ../sass/app/_custom.scss */
+/* line 28, ../sass/app/_custom.scss */
 body {
   overflow-x: hidden;
-}
-
-/* line 33, ../sass/app/_custom.scss */
-body {
+  padding-top: 50px;
   font-family: "Open Sans", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5em;
   font-weight: 400;
 }
 
-/* line 40, ../sass/app/_custom.scss */
+/* line 37, ../sass/app/_custom.scss */
 .navbar-toggle {
   float: left;
   margin-left: 15px;
 }
 
-/* line 44, ../sass/app/_custom.scss */
+/* line 41, ../sass/app/_custom.scss */
 .tile {
   width: 100%;
   height: 150px;
@@ -32,61 +29,79 @@ body {
   padding: 35px;
   margin-bottom: 6px;
   text-align: center;
+  color: #fff;
+  font-weight: bold;
 }
-/* line 53, ../sass/app/_custom.scss */
+/* line 52, ../sass/app/_custom.scss */
 .tile .title {
   margin-top: 0px;
 }
-/* line 56, ../sass/app/_custom.scss */
+/* line 55, ../sass/app/_custom.scss */
+.tile.tile-small {
+  width: 48%;
+  float: left;
+  padding: 24px;
+  margin-right: 3px;
+  margin-left: 4px;
+}
+/* line 62, ../sass/app/_custom.scss */
 .tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green {
   color: #fff;
 }
-/* line 63, ../sass/app/_custom.scss */
+/* line 69, ../sass/app/_custom.scss */
 .tile.purple {
   background: #5133AB;
 }
-/* line 65, ../sass/app/_custom.scss */
+/* line 71, ../sass/app/_custom.scss */
 .tile.purple:hover {
   background: #3e2784;
 }
-/* line 69, ../sass/app/_custom.scss */
-.tile.red {
-  background: #AC193D;
-}
-/* line 71, ../sass/app/_custom.scss */
-.tile.red:hover {
-  background: #7f132d;
-}
 /* line 75, ../sass/app/_custom.scss */
+.tile.red {
+  background: #d9534f;
+}
+/* line 77, ../sass/app/_custom.scss */
+.tile.red:hover {
+  background: #c9302c;
+}
+/* line 81, ../sass/app/_custom.scss */
 .tile.green {
   background: #00A600;
 }
-/* line 77, ../sass/app/_custom.scss */
+/* line 83, ../sass/app/_custom.scss */
 .tile.green:hover {
   background: #007300;
 }
-/* line 81, ../sass/app/_custom.scss */
+/* line 87, ../sass/app/_custom.scss */
 .tile.blue {
   background: #2672EC;
 }
-/* line 83, ../sass/app/_custom.scss */
+/* line 89, ../sass/app/_custom.scss */
 .tile.blue:hover {
   background: #125acd;
 }
-/* line 87, ../sass/app/_custom.scss */
+/* line 93, ../sass/app/_custom.scss */
 .tile.orange {
   background: #DC572E;
 }
-/* line 89, ../sass/app/_custom.scss */
+/* line 95, ../sass/app/_custom.scss */
 .tile.orange:hover {
   background: #b8431f;
+}
+/* line 99, ../sass/app/_custom.scss */
+.tile.bg-temple {
+  background: url(../images/temple.png) center center no-repeat;
+  opacity: 0.8;
+  z-index: -1;
+  border: 1px solid #ccc;
 }
 
 /* Header Image Background 
    - Change the URL below to your image path 
    (example: ../images/background.jpg) */
-/* line 100, ../sass/app/_custom.scss */
-.business-header {
+/* line 112, ../sass/app/_custom.scss */
+.business-header,
+.details-panel {
   height: 250px;
   background: url("../images/header.jpg") center center no-repeat;
   -webkit-background-size: cover;
@@ -94,240 +109,282 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
-/* line 107, ../sass/app/_custom.scss */
-.business-header .tagline {
+/* line 120, ../sass/app/_custom.scss */
+.business-header .tagline,
+.details-panel .tagline {
   text-shadow: 0 0 10px #000;
   color: #fff;
   line-height: 250px;
 }
 
-/* line 114, ../sass/app/_custom.scss */
+/* line 126, ../sass/app/_custom.scss */
+.details-panel {
+  background: url("../images/donation.png") center center no-repeat;
+}
+
+/* line 130, ../sass/app/_custom.scss */
 .table-cell {
   display: table-cell;
 }
 
-/* line 118, ../sass/app/_custom.scss */
+/* line 134, ../sass/app/_custom.scss */
 .disp-table {
   display: table;
 }
 
-/* line 122, ../sass/app/_custom.scss */
+/* line 137, ../sass/app/_custom.scss */
+.tiles-cont {
+  padding-top: 15px;
+}
+/* line 139, ../sass/app/_custom.scss */
 .tiles-cont .m_left {
   padding-right: 3px;
 }
-/* line 125, ../sass/app/_custom.scss */
+/* line 142, ../sass/app/_custom.scss */
 .tiles-cont .m_right {
   padding-left: 3px;
 }
-/* line 128, ../sass/app/_custom.scss */
+/* line 145, ../sass/app/_custom.scss */
 .tiles-cont .m_both {
   padding-right: 3px;
   padding-left: 3px;
 }
 
-/* line 133, ../sass/app/_custom.scss */
+/* line 150, ../sass/app/_custom.scss */
+.m_btntab {
+  padding: 0;
+  position: fixed;
+  z-index: 10;
+}
+/* line 154, ../sass/app/_custom.scss */
+.m_btntab .btn {
+  padding: 14px 12px !important;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+  border-radius: 0;
+}
+/* line 162, ../sass/app/_custom.scss */
+.m_btntab .btn.active {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+/* line 169, ../sass/app/_custom.scss */
 .text-white {
   color: #fff;
 }
 
-/* helper classes for page */
-/* line 3, ../sass/app/_helper.scss */
-.text-center {
-  text-align: center;
+/* line 173, ../sass/app/_custom.scss */
+.margin-top-small {
+  margin-top: 24px !important;
 }
 
-/* line 7, ../sass/app/_helper.scss */
+/* line 176, ../sass/app/_custom.scss */
+.tabcontent {
+  margin-top: 50px;
+}
+
+/* line 181, ../sass/app/_custom.scss */
+.collapsed .glyphicon-chevron-up:before {
+  content: '\e114';
+}
+
+/* helper classes for page */
+/* line 2, ../sass/app/_helper.scss */
 .left {
   float: left !important;
 }
 
-/* line 11, ../sass/app/_helper.scss */
+/* line 6, ../sass/app/_helper.scss */
 .right {
   float: right !important;
 }
 
-/* line 15, ../sass/app/_helper.scss */
+/* line 10, ../sass/app/_helper.scss */
 .clear {
   clear: both !important;
 }
 
-/* line 19, ../sass/app/_helper.scss */
+/* line 14, ../sass/app/_helper.scss */
 .clear-left {
   clear: left !important;
 }
 
-/* line 23, ../sass/app/_helper.scss */
+/* line 18, ../sass/app/_helper.scss */
 .clear-right {
   clear: right !important;
 }
 
-/* line 27, ../sass/app/_helper.scss */
+/* line 22, ../sass/app/_helper.scss */
 .clear-none {
   clear: none !important;
 }
 
-/* line 31, ../sass/app/_helper.scss */
+/* line 26, ../sass/app/_helper.scss */
 .float-reset,
 .float-none {
   float: none !important;
 }
 
-/* line 36, ../sass/app/_helper.scss */
+/* line 31, ../sass/app/_helper.scss */
 .clearfix {
   *zoom: 1;
 }
 
-/* line 40, ../sass/app/_helper.scss */
+/* line 35, ../sass/app/_helper.scss */
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 45, ../sass/app/_helper.scss */
+/* line 40, ../sass/app/_helper.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 49, ../sass/app/_helper.scss */
+/* line 44, ../sass/app/_helper.scss */
 .text-left {
   text-align: left !important;
 }
 
-/* line 53, ../sass/app/_helper.scss */
+/* line 48, ../sass/app/_helper.scss */
 .text-right {
   text-align: right !important;
 }
 
-/* line 57, ../sass/app/_helper.scss */
+/* line 52, ../sass/app/_helper.scss */
 .text-center {
   text-align: center !important;
 }
 
-/* line 61, ../sass/app/_helper.scss */
+/* line 56, ../sass/app/_helper.scss */
 .text-justify {
   text-align: justify !important;
 }
 
-/* line 65, ../sass/app/_helper.scss */
+/* line 60, ../sass/app/_helper.scss */
 .vert-top {
   vertical-align: top;
 }
 
-/* line 69, ../sass/app/_helper.scss */
+/* line 64, ../sass/app/_helper.scss */
 .vert-text-top {
   vertical-align: text-top;
 }
 
-/* line 73, ../sass/app/_helper.scss */
+/* line 68, ../sass/app/_helper.scss */
 .vert-middle {
   vertical-align: middle;
 }
 
-/* line 77, ../sass/app/_helper.scss */
+/* line 72, ../sass/app/_helper.scss */
 .vert-bottom {
   vertical-align: bottom;
 }
 
-/* line 81, ../sass/app/_helper.scss */
+/* line 76, ../sass/app/_helper.scss */
 .vert-text-bottom {
   vertical-align: text-bottom;
 }
 
-/* line 85, ../sass/app/_helper.scss */
+/* line 80, ../sass/app/_helper.scss */
 .center {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* line 91, ../sass/app/_helper.scss */
+/* line 86, ../sass/app/_helper.scss */
 .uncenter {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 96, ../sass/app/_helper.scss */
+/* line 91, ../sass/app/_helper.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 100, ../sass/app/_helper.scss */
+/* line 95, ../sass/app/_helper.scss */
 .block {
   display: block;
 }
 
-/* line 104, ../sass/app/_helper.scss */
+/* line 99, ../sass/app/_helper.scss */
 .inline {
   display: inline;
 }
 
-/* line 108, ../sass/app/_helper.scss */
+/* line 103, ../sass/app/_helper.scss */
 .hide {
   display: none;
 }
 
-/* line 112, ../sass/app/_helper.scss */
+/* line 107, ../sass/app/_helper.scss */
 .relative {
   position: relative;
 }
 
-/* line 116, ../sass/app/_helper.scss */
+/* line 111, ../sass/app/_helper.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 120, ../sass/app/_helper.scss */
+/* line 115, ../sass/app/_helper.scss */
 .static {
   position: static;
 }
 
-/* line 124, ../sass/app/_helper.scss */
+/* line 119, ../sass/app/_helper.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 128, ../sass/app/_helper.scss */
+/* line 123, ../sass/app/_helper.scss */
 .border-all {
   border-width: 1px !important;
   border-style: solid !important;
   border-color: #959595;
 }
 
-/* line 134, ../sass/app/_helper.scss */
+/* line 129, ../sass/app/_helper.scss */
 .border-none {
   border: none !important;
   border-color: #959595;
 }
 
-/* line 139, ../sass/app/_helper.scss */
+/* line 134, ../sass/app/_helper.scss */
 .border-top {
   border-top-width: 1px !important;
   border-top-style: solid !important;
   border-top-color: #959595;
 }
 
-/* line 145, ../sass/app/_helper.scss */
+/* line 140, ../sass/app/_helper.scss */
 .border-right {
   border-right-width: 1px !important;
   border-right-style: solid !important;
   border-right-color: #959595;
 }
 
-/* line 151, ../sass/app/_helper.scss */
+/* line 146, ../sass/app/_helper.scss */
 .border-bottom {
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
   border-bottom-color: #959595;
 }
 
-/* line 157, ../sass/app/_helper.scss */
+/* line 152, ../sass/app/_helper.scss */
 .border-left {
   border-left-width: 1px !important;
   border-left-style: solid !important;
   border-left-color: #959595;
 }
 
-/* line 163, ../sass/app/_helper.scss */
+/* line 158, ../sass/app/_helper.scss */
 .border-hoirz {
   border-top-width: 1px !important;
   border-top-style: solid !important;
@@ -337,7 +394,7 @@ body {
   border-bottom-color: #959595;
 }
 
-/* line 172, ../sass/app/_helper.scss */
+/* line 167, ../sass/app/_helper.scss */
 .border-vert {
   border-left-width: 1px !important;
   border-left-style: solid !important;
@@ -347,58 +404,231 @@ body {
   border-right-color: #959595;
 }
 
-/* line 181, ../sass/app/_helper.scss */
+/* line 176, ../sass/app/_helper.scss */
 .border-top-none {
   border-top: none !important;
 }
 
-/* line 185, ../sass/app/_helper.scss */
+/* line 180, ../sass/app/_helper.scss */
 .border-right-none {
   border-right: none !important;
 }
 
-/* line 189, ../sass/app/_helper.scss */
+/* line 184, ../sass/app/_helper.scss */
 .border-bottom-none {
   border-bottom: none !important;
 }
 
-/* line 193, ../sass/app/_helper.scss */
+/* line 188, ../sass/app/_helper.scss */
 .border-left-none {
   border-left: none !important;
 }
 
-/* line 197, ../sass/app/_helper.scss */
+/* line 192, ../sass/app/_helper.scss */
 .border-all-none {
   border: none !important;
 }
 
 /*background colors*/
-/* line 204, ../sass/app/_helper.scss */
+/* line 199, ../sass/app/_helper.scss */
 .bg-brand-1 {
   background-color: #cc2b2b !important;
 }
 
-/* line 208, ../sass/app/_helper.scss */
+/* line 203, ../sass/app/_helper.scss */
 .bg-grey-1 {
   background-color: #888888;
 }
 
-/* line 212, ../sass/app/_helper.scss */
+/* line 207, ../sass/app/_helper.scss */
 .text-brand-1 {
   color: #cc2b2b !important;
 }
 
-/* line 216, ../sass/app/_helper.scss */
+/* line 211, ../sass/app/_helper.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 220, ../sass/app/_helper.scss */
+/* line 215, ../sass/app/_helper.scss */
 .text-small {
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
-/* line 224, ../sass/app/_helper.scss */
+/* line 218, ../sass/app/_helper.scss */
+.text-normal {
+  font-size: 14px !important;
+}
+
+/* line 222, ../sass/app/_helper.scss */
 .text-large {
-  font-size: 24px;
+  font-size: 24px !important;
+}
+
+/* line 226, ../sass/app/_helper.scss */
+.text-larger {
+  font-size: 28px !important;
+}
+
+/* line 230, ../sass/app/_helper.scss */
+.text-xlarge {
+  font-size: 32px !important;
+}
+
+/* line 234, ../sass/app/_helper.scss */
+.block {
+  display: block !important;
+}
+
+/* line 238, ../sass/app/_helper.scss */
+.inline {
+  display: inline !important;
+}
+
+/* line 242, ../sass/app/_helper.scss */
+.inline-block {
+  display: inline-block !important;
+}
+
+/* line 246, ../sass/app/_helper.scss */
+.none {
+  display: none;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 251, ../sass/app/_helper.scss */
+.p-5 {
+  width: 5% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 256, ../sass/app/_helper.scss */
+.p-10 {
+  width: 10% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 261, ../sass/app/_helper.scss */
+.p-15 {
+  width: 15% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 266, ../sass/app/_helper.scss */
+.p-20 {
+  width: 20% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 271, ../sass/app/_helper.scss */
+.p-25 {
+  width: 25% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 276, ../sass/app/_helper.scss */
+.p-30 {
+  width: 30% !important;
+}
+
+/* line 57, ../../scss/components/helpers-layout.scss */
+/* line 281, ../sass/app/_helper.scss */
+.p-33 {
+  width: 33.3333% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 286, ../sass/app/_helper.scss */
+.p-35 {
+  width: 35% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 291, ../sass/app/_helper.scss */
+.p-40 {
+  width: 40% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 296, ../sass/app/_helper.scss */
+.p-45 {
+  width: 45% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 301, ../sass/app/_helper.scss */
+.p-50 {
+  width: 50% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 306, ../sass/app/_helper.scss */
+.p-55 {
+  width: 55% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 311, ../sass/app/_helper.scss */
+.p-60 {
+  width: 60% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 316, ../sass/app/_helper.scss */
+.p-65 {
+  width: 65% !important;
+}
+
+/* line 60, ../../scss/components/helpers-layout.scss */
+/* line 321, ../sass/app/_helper.scss */
+.p-66 {
+  width: 66.6666% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 326, ../sass/app/_helper.scss */
+.p-70 {
+  width: 70% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 331, ../sass/app/_helper.scss */
+.p-75 {
+  width: 75% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 336, ../sass/app/_helper.scss */
+.p-80 {
+  width: 80% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 341, ../sass/app/_helper.scss */
+.p-85 {
+  width: 85% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 346, ../sass/app/_helper.scss */
+.p-90 {
+  width: 90% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 351, ../sass/app/_helper.scss */
+.p-95 {
+  width: 95% !important;
+}
+
+/* line 66, ../../scss/components/helpers-layout.scss */
+/* line 356, ../sass/app/_helper.scss */
+.p-100 {
+  width: 100% !important;
+}
+
+/* line 63, ../../scss/components/helpers-layout.scss */
+/* line 361, ../sass/app/_helper.scss */
+.p-auto {
+  width: auto !important;
 }
