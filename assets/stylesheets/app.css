@@ -238,9 +238,10 @@ body {
 /* line 224, ../sass/app/_custom.scss */
 .navmenu {
   z-index: 1;
+  background-color: #fff;
 }
 
-/* line 228, ../sass/app/_custom.scss */
+/* line 229, ../sass/app/_custom.scss */
 .canvas {
   position: relative;
   left: 0;
@@ -251,25 +252,34 @@ body {
 }
 
 @media (min-width: 0) {
-  /* line 238, ../sass/app/_custom.scss */
+  /* line 239, ../sass/app/_custom.scss */
   .navbar-toggle {
     display: block;
     /* force showing the toggle */
   }
 }
 @media (min-width: 992px) {
-  /* line 244, ../sass/app/_custom.scss */
+  /* line 245, ../sass/app/_custom.scss */
   .navbar {
     right: auto;
     background: none;
     border: none;
   }
 
-  /* line 249, ../sass/app/_custom.scss */
+  /* line 250, ../sass/app/_custom.scss */
   .canvas {
     padding: 0;
   }
 }
+/* line 255, ../sass/app/_custom.scss */
+.action-items {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 22px;
+}
+
 /* helper classes for page */
 /* line 2, ../sass/app/_helper.scss */
 .left {

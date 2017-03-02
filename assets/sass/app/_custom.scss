@@ -223,6 +223,7 @@ body {
 
 .navmenu {
   z-index: 1;
+  background-color: #fff;
 }
 
 .canvas {
@@ -249,4 +250,12 @@ body {
   .canvas {
     padding: 0;
   }
+}
+
+.action-items{
+    position: absolute;
+    bottom:0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 22px;
 }
