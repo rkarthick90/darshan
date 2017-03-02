@@ -5,7 +5,97 @@ body {
 }
 
 
-/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+$color_purple: #5133AB;
+$color_red: #AC193D;
+$color_orange: #DC572E;
+$color_green: #00A600;
+$color_blue: #2672EC;
+$color_white: #fff;
+// colors from http://www.creepyed.com/2012/09/windows-8-colors-hex-code/
+$base_font_size: 14px;
+$base_line_height: 1.5em;
+$text_font_family: 'Open Sans',
+"Segoe UI",
+Frutiger,
+"Frutiger Linotype",
+"Dejavu Sans",
+"Helvetica Neue",
+Arial,
+sans-serif;
+$display_font_family: 'Open Sans',
+"Segoe UI",
+Frutiger,
+"Frutiger Linotype",
+"Dejavu Sans",
+"Helvetica Neue",
+Arial,
+sans-serif;
+body {
+    font-family: $text_font_family;
+    font-size: $base_font_size;
+    line-height: $base_line_height;
+    font-weight: 400;
+}
+
+.navbar-toggle{
+    float:left;
+    margin-left:15px;
+}
+.tile {
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 35px;
+    margin-bottom: 6px;
+    text-align:center;
+    .title {
+        margin-top: 0px;
+    }
+    &.purple,
+    &.blue,
+    &.red,
+    &.orange,
+    &.green {
+        color: #fff;
+    }
+    &.purple {
+        background: $color_purple;
+        &:hover {
+            background: darken($color_purple, 10%);
+        }
+    }
+    &.red {
+        background: $color_red;
+        &:hover {
+            background: darken($color_red, 10%);
+        }
+    }
+    &.green {
+        background: $color_green;
+        &:hover {
+            background: darken($color_green, 10%);
+        }
+    }
+    &.blue {
+        background: $color_blue;
+        &:hover {
+            background: darken($color_blue, 10%);
+        }
+    }
+    &.orange {
+        background: $color_orange;
+        &:hover {
+            background: darken($color_orange, 10%);
+        }
+    }
+}
+
+
+/* Header Image Background 
+   - Change the URL below to your image path 
+   (example: ../images/background.jpg) */
 
 .business-header {
     height: 250px;
@@ -21,142 +111,25 @@ body {
     }
 }
 
-
-/* Customize the text color and shadow color and to optimize text legibility. */
-
-
-/* Toggle Styles */
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-    padding-left: 250px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
-
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-        text-indent: 20px;
-        line-height: 40px;
-        border-top: 1px solid #f6f6f6;
-        &:last-child {
-            border-bottom: 1px solid #f6f6f6;
-        }
-        a {
-            display: block;
-            text-decoration: none;
-            color: #fff;
-            &:first-child {
-                font-weight: bold;
-                color: #fff;
-            }
-            &:hover {
-                text-decoration: none;
-                color: #333;
-                background: #fff;
-            }
-
-            &:active, &:focus{
-                text-decoration: none;
-            }
-        }
-    }
-    .sidebar-brand {
-        height: 65px;
-        font-size: 18px;
-        line-height: 60px;
-        a {
-            color: #999999;
-            &:hover {
-                color: #fff;
-                background: none;
-            }
-        }
-    }
-}
-
-.navbar-toggle {
-    float: left;
-    .icon-bar {
-        background-color: #fff;
-        display: block;
-        width: 25px;
-        height: 3px;
-        border-radius: 1px;
-    }
-}
-
-.home-tiles {
-    padding: 5px;
-    .custom-tile {
-        border-style: none;
-        border-width: 0;
-        border-color: #dbdbdb;
-        padding: 24px;
-        background: #f6f6f6;
-        height: 150px;
-        color: #fff;
-        margin-bottom: 5px;
-    }
-    .row {
-        .col-xs-6{
-            &:first-child{
-                 padding-right: 3px;
-            }
-            &:last-child{
-                padding-left: 3px;
-            }
-        }
-    }
-}
-
 .table-cell {
     display: table-cell;
 }
 
 .disp-table {
     display: table;
+}
+.tiles-cont{
+    .m_left{
+        padding-right: 3px;
+    }
+    .m_right{
+        padding-left:3px;
+    }
+    .m_both{
+        padding-right: 3px;
+        padding-left:3px;
+    }
+}
+.text-white{
+    color:$color_white;
 }
