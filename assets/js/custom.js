@@ -35,7 +35,7 @@ $(document).ready(function(){
     $(document).off('change', '#selectlang');
     $(document).on('change', '#selectlang', function(){
         if($(this).val() == 'English'){
-            location.href = "pages/login.html";
+            location.href = "login.html";
         }
     });
 });
