@@ -36,6 +36,11 @@ $(document).ready(function(){
     $(document).on('change', '#selectlang', function(){
         pageRedirect($(this).val())
     });
+
+    $(document).off('click','[data-target]');
+    $(document).on('click','[data-target]', function(){
+        pageRedirect('submenu');
+    });
 });
 
 function pageRedirect(arg){
@@ -48,6 +53,9 @@ function pageRedirect(arg){
             break;
         case 'English':
             location.href = "login.html";
+            break;
+        case 'submenu':
+            location.href = "submenu.html";
             break;
         default:
             location.href = "/";
