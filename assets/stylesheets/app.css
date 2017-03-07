@@ -280,6 +280,12 @@ body {
   padding-top: 22px;
 }
 
+/* language choose section styles*/
+/* line 264, ../sass/app/_custom.scss */
+.langpanel {
+  margin: 50% auto;
+}
+
 /* helper classes for page */
 /* line 2, ../sass/app/_helper.scss */
 .left {

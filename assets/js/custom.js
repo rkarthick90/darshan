@@ -30,6 +30,14 @@ $(document).ready(function(){
         var temp = $(this).attr('data-sub-tile');
         pageRedirect('detail');
     });
+
+    // language selection
+    $(document).off('change', '#selectlang');
+    $(document).on('change', '#selectlang', function(){
+        if($(this).val() == 'English'){
+            location.href = "pages/login.html";
+        }
+    });
 });
 
 function pageRedirect(arg){
