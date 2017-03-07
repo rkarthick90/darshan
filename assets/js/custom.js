@@ -34,19 +34,20 @@ $(document).ready(function(){
     // language selection
     $(document).off('change', '#selectlang');
     $(document).on('change', '#selectlang', function(){
-        if($(this).val() == 'English'){
-            location.href = "login.html";
-        }
+        pageRedirect($(this).val())
     });
 });
 
 function pageRedirect(arg){
     switch(arg){
         case 'menu':
-            location.href = 'pages/menu.html';
+            location.href = 'menu.html';
             break;
         case 'detail':
-            location.href = "pages/detail.html";
+            location.href = "detail.html";
+            break;
+        case 'English':
+            location.href = "login.html";
             break;
         default:
             location.href = "/";

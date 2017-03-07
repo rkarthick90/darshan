@@ -49,6 +49,7 @@ body {
     text-align:center;
     color:#fff;
     font-weight: bold;
+    position: relative;
     .title {
         margin-top: 0px;
     }
@@ -148,6 +149,11 @@ body {
         padding-left:3px;
     }
 }
+.menu-layout{
+    .tiles-cont{
+        padding:0;
+    }
+}
 .m_btntab{
     padding: 0;
     position: fixed;
@@ -231,7 +237,7 @@ body {
   left: 0;
   z-index: 2;
   min-height: 100%;
-  padding: 50px 0 0 0;
+  padding:1px 0 0 0;
   background: #fff;
 }
 
@@ -263,4 +269,22 @@ body {
 /* language choose section styles*/
 .langpanel{
     margin:50% auto;
+}
+
+.price-cart{
+    position: absolute;
+    width: 90%;
+    bottom: 6px;
+    left: 10px;
+    .amount{
+        float:left;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+    .cart-btn{
+        float:right;
+        font-size: 10px !important;
+        font-weight: bold;
+        width:auto !important;
+    }
 }
