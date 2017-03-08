@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     $(document).on('click', '[data-add-cart]', function(e){
         e.preventDefault();
+        
     });
 
     // language selection
