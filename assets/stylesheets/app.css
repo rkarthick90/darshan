@@ -348,6 +348,61 @@ body {
   width: auto !important;
 }
 
+/* line 322, ../sass/app/_custom.scss */
+.marginBottom-0 {
+  margin-bottom: 0;
+}
+
+/* line 324, ../sass/app/_custom.scss */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* line 325, ../sass/app/_custom.scss */
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+/* line 326, ../sass/app/_custom.scss */
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+/* line 327, ../sass/app/_custom.scss */
+.dropdown-submenu:hover > a:after {
+  border-left-color: #555;
+}
+
+/* line 328, ../sass/app/_custom.scss */
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+/* line 328, ../sass/app/_custom.scss */
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
 /* helper classes for page */
 /* line 2, ../sass/app/_helper.scss */
 .left {
@@ -926,12 +981,4 @@ body {
 /* line 115, ../sass/app/_checkbox.scss */
 .checkbox-success input[type="checkbox"]:checked + label::after {
   color: #fff;
-}
-
-.perishable {
-	visibility:show;
-}
-
-.nonperishable {
-	visibility:hidden;
 }
