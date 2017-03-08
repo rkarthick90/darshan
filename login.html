@@ -63,7 +63,7 @@
 					type: 'POST',
 					contentType: 'application/json',
 					//url: 'http://ec2-54-187-15-155.us-west-2.compute.amazonaws.com:8080/PoCAppServer/signin/user',
-					url: 'http://192.168.0.36:8080/PoCAppServer/signin/user',
+					url: 'http://localhost:8080/PoCAppServer/signin/user',
 					data: formToJSON(),
 					success: function (data, textStatus, jqXHR) {
 						console.log('Stock updated successfully. Status: ' + textStatus + ' Data: ' + data);

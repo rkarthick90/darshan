@@ -2,294 +2,240 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Darshan</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darshan</title>
 
-    <!-- Bootstrap -->
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <!-- side bar -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+<!-- Bootstrap -->
+<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- font-awesome -->
+<link rel="stylesheet"
+	href="../node_modules/font-awesome/css/font-awesome.min.css">
+<!-- side bar -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link href="../assets/stylesheets/app.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="../assets/stylesheets/app.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
-<body>
-    <div class="navmenu navmenu-default navmenu-fixed-right">
-        <div class="navmenu-brand text-center bold">  PRASAD ONLINE</div>
-        <hr/>
-        <p class="bold text-center"> ADDED ITEM(S) IN YOUR CART </p>
-        <div class="table-responsive center p-90">
-           <table class="table border-all-none">
-               <thead>
-                   <tr>
-                       <th class="border-all-none pull-left">Items</th>
-                       <th class="border-all-none pull-right">Qty</th>
-                   </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Prasad</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="bold center text-large p-90">
-            <div class="pull-left"> Total Amount </div>
-            <div class="pull-right"> $ 18.00 </div>
-        </div>
-        <div class="action-items p-100">
-            <p><button type="button" class="btn btn-danger btn-lg p-80"> CHECK OUT </button></p>
-            <p><button type="button" class="btn btn-primary btn-lg p-80"> VIEW CART </button></p>
-            <p><button type="button" class="btn btn-default btn-lg p-80"> ADD MORE </button></p>
-        </div>
-    </div>
-    <div class="canvas">
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="row">
-                <div class="col-xs-2 padding-all-zero">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-xs-8 padding-all-zero">
-                    <div class="navbar-title"> PRASAD ONLINE </div>
-                </div>
-                <div class="col-xs-2 padding-all-zero">
-                    <div class="m_nav-bar navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
-                        <span class="vert-middle">1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<body onLoad="loadProducts();">
+	<div class="navmenu navmenu-default navmenu-fixed-right">
+		<div class="navmenu-brand text-center bold">PRASAD ONLINE</div>
+		<hr />
+		<p class="bold text-center">ADDED ITEM(S) IN YOUR CART</p>
+		<div class="table-responsive center p-90">
+			<table class="table border-all-none">
+				<thead>
+					<tr>
+						<th class="border-all-none pull-left">Items</th>
+						<th class="border-all-none pull-right">Qty</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Prasad</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="bold center text-large p-90">
+			<div class="pull-left">Total Amount</div>
+			<div class="pull-right">$ 18.00</div>
+		</div>
+		<div class="action-items p-100">
+			<p>
+				<button type="button" class="btn btn-danger btn-lg p-80">
+					CHECK OUT</button>
+			</p>
+			<p>
+				<button type="button" class="btn btn-primary btn-lg p-80">
+					VIEW CART</button>
+			</p>
+			<p>
+				<button type="button" class="btn btn-default btn-lg p-80">
+					ADD MORE</button>
+			</p>
+		</div>
+	</div>
+	<div class="canvas">
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="row">
+					<div class="col-xs-2 padding-all-zero">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle"
+								data-toggle="collapse"
+								data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+						</div>
+					</div>
+					<div class="col-xs-8 padding-all-zero">
+						<div class="navbar-title">PRASAD ONLINE</div>
+					</div>
+					<div class="col-xs-2 padding-all-zero">
+						<div class="m_nav-bar navbar-toggle" data-toggle="offcanvas"
+							data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+							<span class="vert-middle">1</span><i
+								class="fa fa-cart-plus text-xlarge text-white vert-middle"
+								aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
 
-    <div class="container m_btntab menucont">
-        <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-default active" role="button" data-tab-btn="Perishable" onClick="loadProducts();">Perishable</a>
-            <a href="#" class="btn btn-default" role="button" data-tab-btn="non-Perishable">Non Perishable</a>
-        </div>
-    </div>
-    <div class="tabcontent" >
-        <div class="container" data-tab-content="Perishable" >
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="bold text-center"> Check service availability  </h2>
-                    <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Search">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="tiles-cont">
-                <div class="row">
-                    <div class="sub-tiles" id="test-sub">
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="sub-tiles" id="aradhan-sub">
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="sub-tiles" id="prasad-sub">
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container none" data-tab-content="non-Perishable">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="bold text-center"> Check service availability  </h2>
-                    <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Search">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="tiles-cont">
-                <div class="row">
-                    <div class="sub-tiles" id="aradhan-sub">
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="sub-tiles" id="test-sub">
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="sub-tiles" id="prasad-sub">
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                            <div class="price-cart">
-                                <span class="amount"> $ 5.00 </span>
-                                <a class="btn btn-info cart-btn"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../node_modules/bootstrap/js/tab.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
-    <script type="text/javascript">
-
-    function formToJSON() {
+		<div class="container m_btntab menucont">
+			<div class="btn-group btn-group-justified">
+				<a href="#" class="btn btn-default active" role="button"
+					data-tab-btn="Perishable" onclick="togglePerish();">Perishable</a>
+				<a href="#" class="btn btn-default" role="button"
+					data-tab-btn="non-Perishable" onclick="toggleNonPerish();">Non Perishable</a>
+			</div>
+		</div>
+		<div class="tabcontent">
+			<div class="container" data-tab-content="Perishable">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="bold text-center">Check service availability</h2>
+						<div class="input-group">
+							<input type="text" class="form-control" aria-label="Search">
+							<span class="input-group-addon"><span
+								class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+						</div>
+					</div>
+				</div>
+				<div id="perishTiles" class="tiles-cont">
+					
+				</div>
+			</div>
+			<div class="container none" data-tab-content="non-Perishable">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="bold text-center">Check service availability</h2>
+						<div class="input-group">
+							<input type="text" class="form-control" aria-label="Search">
+							<span class="input-group-addon"><span
+								class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+						</div>
+					</div>
+				</div>
+				<div id="nonPerishTiles" class="tiles-cont">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../node_modules/bootstrap/js/tab.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+	<script src="../assets/js/custom.js"></script>
+	<script type="text/javascript">
+		function formToJSON() {
 			return JSON.stringify({
-				"userId": "admin",
-				"password": "admin"
+				"userId" : "admin",
+				"password" : "admin"
 			});
 		}
-      function loadProducts()
-      {
-        //'http://ec2-54-187-15-155.us-west-2.compute.amazonaws.com:8080/PoCAppServer/products/getperishableproducts'//
-        alert("loadproducts");
-        $(function () {
-          $.ajax({
-            type: 'POST',
-            contentType: 'application/html',
-            url: 'http://localhost:8080/PoCAppServer/products/getallproducts',
-            success: function (data, textStatus, jqXHR) {
-              //alert("success");
-             // console.log(data[0].productid);
-              //var dataobject=data;
-              //var jsonData = JSON.parse(dataobject);
-              for (var i = 0; i < data.length; i++) {
-                  var counter = data[i];
-                  //console.log(counter.counter_name);
-                  alert(counter.productname);
-              }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-              alert("failure");
-              alert(jqXHR);
-            }
+		function togglePerish(){
+			var percols = document.getElementsByClassName('perishable');
+			for(i=0; i<percols.length; i++) {
+				percols[i].style.visibility = 'visible';
+			}
+			var nonpercols = document.getElementsByClassName('nonperishable');
+			for(i=0; i<nonpercols.length; i++) {
+				nonpercols[i].style.visibility = 'hidden';
+			}
+		}
+		function toggleNonPerish(){
+			var nonpercols = document.getElementsByClassName('nonperishable');
+			for(i=0; i<nonpercols.length; i++) {
+				nonpercols[i].style.visibility = 'visible';
+			}
+			var percols = document.getElementsByClassName('perishable');
+			for(i=0; i<percols.length; i++) {
+				percols[i].style.visibility = 'hidden';
+			}
+		}
+		function addToCart(productid, productname) {
+			alert(productid+" --- "+productname);
+		}
+		function loadProducts() {
+			//'http://ec2-54-187-15-155.us-west-2.compute.amazonaws.com:8080/PoCAppServer/products/getperishableproducts'//
+			$(function() {
+				$.ajax({
+					type : 'POST',
+					contentType : 'application/html',
+					url : 'http://localhost:8080/PoCAppServer/products/getallproducts',
+					success : function(data, textStatus, jqXHR) {
+						localStorage.setItem("productData", data);
+						var tag = '';
+						var nonPertag = '';
+						for (var i = 0; i < data.length; i++) {
+							var counter = data[i];
+							if(i%2 == 0){
+								if(data[i].perishable == 'true')
+									tag += '<div class="row"><div class="sub-tiles perishable" id="test-sub'+i+'"><div class="tile tile-small bg-temple disp-table" data-sub-tile><h3 class="title table-cell vert-middle">'+data[i].productname+'</h3><div class="price-cart"><span class="amount"> $'+data[i].price+' </span> <a class="btn btn-info cart-btn" onclick="addToCart('+data[i].productid+','+data[i].productname+')"> ADD TO CART </a><input type="hidden" id="isPerish" value="'+data[i].perishable+'"></div></div>';
+								else	
+									nonPertag += '<div class="row"><div class="sub-tiles nonperishable" id="test-sub'+i+'"><div class="tile tile-small bg-temple disp-table" data-sub-tile><h3 class="title table-cell vert-middle">'+data[i].productname+'</h3><div class="price-cart"><span class="amount"> $'+data[i].price+' </span> <a class="btn btn-info cart-btn" onclick="addToCart('+data[i].productid+','+data[i].productname+')"> ADD TO CART </a><input type="hidden" id="isPerish" value="'+data[i].perishable+'"></div></div>';
+							} else {
+								if(data[i].perishable == 'true')
+									tag += '<div class="sub-tiles perishable" id="test-sub'+i+'"><div class="tile tile-small bg-temple disp-table" data-sub-tile><h3 class="title table-cell vert-middle">'+data[i].productname+'</h3><div class="price-cart"><span class="amount"> $'+data[i].price+' </span> <a class="btn btn-info cart-btn" onclick="addToCart('+data[i].productid+','+data[i].productname+')"> ADD TO CART </a><input type="hidden" id="isPerish" value="'+data[i].perishable+'"></div></div>';
+								else
+									nonPertag += '<div class="sub-tiles nonperishable" id="test-sub'+i+'"><div class="tile tile-small bg-temple disp-table" data-sub-tile><h3 class="title table-cell vert-middle">'+data[i].productname+'</h3><div class="price-cart"><span class="amount"> $'+data[i].price+' </span> <a class="btn btn-info cart-btn" onclick="addToCart('+data[i].productid+','+data[i].productname+')"> ADD TO CART </a><input type="hidden" id="isPerish" value="'+data[i].perishable+'"></div></div>';
+							}
+							
+							if(i%2 == 0) {
+								tag += '</div>';
+								nonPertag += '</div>';
+							}
+							
+						}
+						console.log(tag);
+						document.getElementById("perishTiles").innerHTML = tag;
+						document.getElementById("nonPerishTiles").innerHTML = nonPertag;
+					},
+					error : function(jqXHR, textStatus, errorThrown) {
+						alert("failure");
+						alert(jqXHR);
+					}
 
-          });
-        });
-      }
-    </script>
+				});
+			});
+		}
+	</script>
 
 </body>
 
