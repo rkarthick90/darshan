@@ -31,12 +31,13 @@ body {
   text-align: center;
   color: #fff;
   font-weight: bold;
+  position: relative;
 }
-/* line 52, ../sass/app/_custom.scss */
+/* line 53, ../sass/app/_custom.scss */
 .tile .title {
   margin-top: 0px;
 }
-/* line 55, ../sass/app/_custom.scss */
+/* line 56, ../sass/app/_custom.scss */
 .tile.tile-small {
   width: 48%;
   float: left;
@@ -44,62 +45,97 @@ body {
   margin-right: 3px;
   margin-left: 4px;
 }
-/* line 62, ../sass/app/_custom.scss */
+/* line 63, ../sass/app/_custom.scss */
 .tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green {
   color: #fff;
 }
-/* line 69, ../sass/app/_custom.scss */
+/* line 70, ../sass/app/_custom.scss */
 .tile.purple {
   background: #5133AB;
 }
-/* line 71, ../sass/app/_custom.scss */
+/* line 72, ../sass/app/_custom.scss */
 .tile.purple:hover {
   background: #3e2784;
 }
-/* line 75, ../sass/app/_custom.scss */
+/* line 76, ../sass/app/_custom.scss */
 .tile.red {
   background: #d9534f;
 }
-/* line 77, ../sass/app/_custom.scss */
+/* line 78, ../sass/app/_custom.scss */
 .tile.red:hover {
   background: #c9302c;
 }
-/* line 81, ../sass/app/_custom.scss */
+/* line 82, ../sass/app/_custom.scss */
 .tile.green {
   background: #00A600;
 }
-/* line 83, ../sass/app/_custom.scss */
+/* line 84, ../sass/app/_custom.scss */
 .tile.green:hover {
   background: #007300;
 }
-/* line 87, ../sass/app/_custom.scss */
+/* line 88, ../sass/app/_custom.scss */
 .tile.blue {
   background: #2672EC;
 }
-/* line 89, ../sass/app/_custom.scss */
+/* line 90, ../sass/app/_custom.scss */
 .tile.blue:hover {
   background: #125acd;
 }
-/* line 93, ../sass/app/_custom.scss */
+/* line 94, ../sass/app/_custom.scss */
 .tile.orange {
   background: #DC572E;
 }
-/* line 95, ../sass/app/_custom.scss */
+/* line 96, ../sass/app/_custom.scss */
 .tile.orange:hover {
   background: #b8431f;
 }
-/* line 99, ../sass/app/_custom.scss */
+/* line 100, ../sass/app/_custom.scss */
 .tile.bg-temple {
   background: url(../images/temple.png) center center no-repeat;
   opacity: 0.8;
-  z-index: -1;
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+/* line 106, ../sass/app/_custom.scss */
+.tile.bg-laddu {
+  background: url(../images/laddu.png) center center no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+/* line 112, ../sass/app/_custom.scss */
+.tile.bg-kanika {
+  background: url(../images/kanika.png) center center no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+/* line 118, ../sass/app/_custom.scss */
+.tile.bg-besan {
+  background: url(../images/besan.png) center center no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+/* line 124, ../sass/app/_custom.scss */
+.tile.bg-appam {
+  background: url(../images/appam.png) center center no-repeat;
+  opacity: 0.8;
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+/* line 130, ../sass/app/_custom.scss */
+.tile.bg-alu {
+  background: url(../images/alu.png) center center no-repeat;
+  opacity: 0.8;
+  z-index: 1;
   border: 1px solid #ccc;
 }
 
 /* Header Image Background 
    - Change the URL below to your image path 
    (example: ../images/background.jpg) */
-/* line 112, ../sass/app/_custom.scss */
+/* line 143, ../sass/app/_custom.scss */
 .business-header,
 .details-panel {
   height: 250px;
@@ -109,7 +145,7 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
-/* line 120, ../sass/app/_custom.scss */
+/* line 151, ../sass/app/_custom.scss */
 .business-header .tagline,
 .details-panel .tagline {
   text-shadow: 0 0 10px #000;
@@ -117,47 +153,52 @@ body {
   line-height: 250px;
 }
 
-/* line 126, ../sass/app/_custom.scss */
-.details-panel {
-  background: url("../images/donation.png") center center no-repeat;
+/* line 157, ../sass/app/_custom.scss */
+.laddu-img {
+  background: url("../images/laddu.png") center center no-repeat;
   height: 200px;
 }
 
-/* line 131, ../sass/app/_custom.scss */
+/* line 162, ../sass/app/_custom.scss */
 .table-cell {
   display: table-cell;
 }
 
-/* line 135, ../sass/app/_custom.scss */
+/* line 166, ../sass/app/_custom.scss */
 .disp-table {
   display: table;
 }
 
-/* line 138, ../sass/app/_custom.scss */
+/* line 169, ../sass/app/_custom.scss */
 .tiles-cont {
   padding-top: 15px;
 }
-/* line 140, ../sass/app/_custom.scss */
+/* line 171, ../sass/app/_custom.scss */
 .tiles-cont .m_left {
   padding-right: 3px;
 }
-/* line 143, ../sass/app/_custom.scss */
+/* line 174, ../sass/app/_custom.scss */
 .tiles-cont .m_right {
   padding-left: 3px;
 }
-/* line 146, ../sass/app/_custom.scss */
+/* line 177, ../sass/app/_custom.scss */
 .tiles-cont .m_both {
   padding-right: 3px;
   padding-left: 3px;
 }
 
-/* line 151, ../sass/app/_custom.scss */
+/* line 183, ../sass/app/_custom.scss */
+.menu-layout .tiles-cont {
+  padding: 0;
+}
+
+/* line 187, ../sass/app/_custom.scss */
 .m_btntab {
   padding: 0;
   position: fixed;
   z-index: 10;
 }
-/* line 155, ../sass/app/_custom.scss */
+/* line 191, ../sass/app/_custom.scss */
 .m_btntab .btn {
   padding: 14px 12px !important;
   font-size: 16px;
@@ -167,34 +208,34 @@ body {
   border-color: #333;
   border-radius: 0;
 }
-/* line 163, ../sass/app/_custom.scss */
+/* line 199, ../sass/app/_custom.scss */
 .m_btntab .btn.active {
   background-color: #d9534f;
   border-color: #d9534f;
 }
 
-/* line 170, ../sass/app/_custom.scss */
+/* line 206, ../sass/app/_custom.scss */
 .text-white {
   color: #fff;
 }
 
-/* line 174, ../sass/app/_custom.scss */
+/* line 210, ../sass/app/_custom.scss */
 .margin-top-small {
   margin-top: 24px !important;
 }
 
-/* line 177, ../sass/app/_custom.scss */
+/* line 213, ../sass/app/_custom.scss */
 .tabcontent {
   margin-top: 50px;
 }
 
-/* line 182, ../sass/app/_custom.scss */
+/* line 218, ../sass/app/_custom.scss */
 .collapsed .glyphicon-chevron-up:before {
   content: '\e114';
 }
 
 /*customized top bar */
-/* line 189, ../sass/app/_custom.scss */
+/* line 225, ../sass/app/_custom.scss */
 .m_nav-bar {
   margin-top: 10px;
   font-size: 18px;
@@ -204,27 +245,27 @@ body {
   background: none;
 }
 
-/* line 198, ../sass/app/_custom.scss */
+/* line 234, ../sass/app/_custom.scss */
 .navbar-fixed-bottom {
   height: 55px;
 }
 
-/* line 202, ../sass/app/_custom.scss */
+/* line 238, ../sass/app/_custom.scss */
 .form-group {
   margin-bottom: 0;
   margin-top: 5px;
 }
-/* line 205, ../sass/app/_custom.scss */
+/* line 241, ../sass/app/_custom.scss */
 .form-group #exampleInputAmount {
   height: 35px;
 }
 
-/* line 210, ../sass/app/_custom.scss */
+/* line 246, ../sass/app/_custom.scss */
 .padding-all-zero {
   padding: 0;
 }
 
-/* line 214, ../sass/app/_custom.scss */
+/* line 250, ../sass/app/_custom.scss */
 .navbar-title {
   height: 50px;
   padding: 15px 15px;
@@ -235,49 +276,76 @@ body {
   color: #fff;
 }
 
-/* line 224, ../sass/app/_custom.scss */
+/* line 260, ../sass/app/_custom.scss */
 .navmenu {
   z-index: 1;
   background-color: #fff;
 }
 
-/* line 229, ../sass/app/_custom.scss */
+/* line 265, ../sass/app/_custom.scss */
 .canvas {
   position: relative;
   left: 0;
   z-index: 2;
   min-height: 100%;
-  padding: 50px 0 0 0;
+  padding: 1px 0 0 0;
   background: #fff;
 }
 
 @media (min-width: 0) {
-  /* line 239, ../sass/app/_custom.scss */
+  /* line 275, ../sass/app/_custom.scss */
   .navbar-toggle {
     display: block;
     /* force showing the toggle */
   }
 }
 @media (min-width: 992px) {
-  /* line 245, ../sass/app/_custom.scss */
+  /* line 281, ../sass/app/_custom.scss */
   .navbar {
     right: auto;
     background: none;
     border: none;
   }
 
-  /* line 250, ../sass/app/_custom.scss */
+  /* line 286, ../sass/app/_custom.scss */
   .canvas {
     padding: 0;
   }
 }
-/* line 255, ../sass/app/_custom.scss */
+/* line 291, ../sass/app/_custom.scss */
 .action-items {
   position: absolute;
   bottom: 0;
   text-align: center;
   border-top: 1px solid #ccc;
   padding-top: 22px;
+}
+
+/* language choose section styles*/
+/* line 300, ../sass/app/_custom.scss */
+.langpanel {
+  margin: 50% auto;
+}
+
+/* line 304, ../sass/app/_custom.scss */
+.price-cart {
+  position: absolute;
+  width: 90%;
+  bottom: 6px;
+  left: 10px;
+}
+/* line 309, ../sass/app/_custom.scss */
+.price-cart .amount {
+  float: left;
+  vertical-align: middle;
+  font-weight: bold;
+}
+/* line 314, ../sass/app/_custom.scss */
+.price-cart .cart-btn {
+  float: right;
+  font-size: 10px !important;
+  font-weight: bold;
+  width: auto !important;
 }
 
 /* helper classes for page */
@@ -858,4 +926,12 @@ body {
 /* line 115, ../sass/app/_checkbox.scss */
 .checkbox-success input[type="checkbox"]:checked + label::after {
   color: #fff;
+}
+
+.perishable {
+	visibility:show;
+}
+
+.nonperishable {
+	visibility:hidden;
 }
