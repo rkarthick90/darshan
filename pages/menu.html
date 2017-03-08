@@ -28,23 +28,23 @@
 
 <body>
     <div class="navmenu navmenu-default navmenu-fixed-right">
-        <div class="navmenu-brand text-center bold">  PRASAD ONLINE</div>
+        <div class="navmenu-brand text-center bold"> PRASAD ONLINE</div>
         <hr/>
         <p class="bold text-center"> ADDED ITEM(S) IN YOUR CART </p>
         <div class="table-responsive center p-90">
-           <table class="table border-all-none"> 
-               <thead> 
-                   <tr> 
-                       <th class="border-all-none pull-left">Items</th> 
-                       <th class="border-all-none pull-right">Qty</th> 
-                   </tr> 
-                </thead> 
-                <tbody> 
-                    <tr> 
+            <table class="table border-all-none">
+                <thead>
+                    <tr>
+                        <th class="border-all-none pull-left">Items</th>
+                        <th class="border-all-none pull-right">Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td>Prasad</td>
-                        <td>1</td> 
-                    </tr> 
-                </tbody> 
+                        <td>1</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         <div class="bold center text-large p-90">
@@ -58,186 +58,93 @@
         </div>
     </div>
     <div class="canvas">
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="row">
-                <div class="col-xs-2 padding-all-zero">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="row">
+                    <div class="col-xs-2 padding-all-zero">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target-menu="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 padding-all-zero">
+                        <div class="navbar-title"> PRASAD ONLINE </div>
+                    </div>
+                    <div class="col-xs-2 padding-all-zero">
+                        <div class="m_nav-bar navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target-menu=".navmenu" data-canvas=".canvas">
+                            <span class="vert-middle">1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle"
+                                aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-8 padding-all-zero">
-                    <div class="navbar-title"> PRASAD ONLINE </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-xs-2 padding-all-zero">
-                    <div class="m_nav-bar navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
-                        <span class="vert-middle">1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle" aria-hidden="true"></i>
-                    </div>
-                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="container m_btntab menucont">
-        <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-default active" role="button" data-tab-btn="services">Services</a>
-            <a href="#" class="btn btn-default" role="button" data-tab-btn="quickpay">Quick Pay</a>
-        </div>
-    </div>
-    <div class="tabcontent">
-        <div class="container" data-tab-content="services">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="bold text-center"> Services you want to offer </h2>
-                    <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Search">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="tiles-cont">
-                <div class="row">
-                    <div class="col-xs-12 m_both">
-                        <div class="tile bg-temple disp-table collapsed" data-toggle="collapse" data-target="#donation-sub">
-                            <h3 class="title table-cell vert-middle"> DONATION
-                                <span class="glyphicon glyphicon-chevron-up block margin-top-small text-xlarge"></span>
-                            </h3>
+            <!-- /.container -->
+        </nav>
+        <div class="menu-layout">
+            <div class="container">
+                <div class="tiles-cont">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="bold text-center"> Services you want to avail </h2>
                         </div>
                     </div>
-                    <div class="sub-tiles collapse" id="donation-sub">
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
-                        </div>
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 m_both">
-                        <div class="tile orange disp-table collapsed" data-toggle="collapse" data-target="#aradhan-sub">
-                            <h3 class="title table-cell vert-middle"> ARADHAN
-                                <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
-                            </h3>
+                    <div class="row">
+                        <div class="col-xs-12 m_both">
+                            <div class="tile purple disp-table" data-target-menu="#prasad-sub1">
+                                <h3 class="title table-cell vert-middle"> PRASAD BOOKING
+                                </h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="sub-tiles collapse" id="aradhan-sub">
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
-                        </div>
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 m_both">
-                        <div class="tile purple disp-table collapsed" data-toggle="collapse" data-target="#prasad-sub">
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING
-                                <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
-                            </h3>
+                    <div class="row">
+                        <div class="col-xs-12 m_both">
+                            <div class="tile bg-temple disp-table" data-target-menu="#donation-sub">
+                                <h3 class="title table-cell vert-middle"> DONATION
+                                </h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="sub-tiles collapse" id="prasad-sub">
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                        </div>
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container none" data-tab-content="quickpay">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="bold text-center"> Quick Pay options </h2>
-                    <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Search">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="tiles-cont">
-                <div class="row">
-                    <div class="col-xs-12 m_both">
-                        <div class="tile orange disp-table collapsed" data-toggle="collapse" data-target="#donation-sub1">
-                            <h3 class="title table-cell vert-middle"> DONATION
-                                <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
-                            </h3>
+                    <div class="row">
+                        <div class="col-xs-12 m_both">
+                            <div class="tile orange disp-table" data-target-menu="#aradhan-sub">
+                                <h3 class="title table-cell vert-middle"> ARADHAN
+                                </h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="sub-tiles collapse" id="donation-sub1">
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
-                        </div>
-                        <div class="tile tile-small orange disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 m_both">
-                        <div class="tile bg-temple disp-table collapsed" data-toggle="collapse" data-target="#aradhan-sub1">
-                            <h3 class="title table-cell vert-middle"> ARADHAN
-                                <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="sub-tiles collapse" id="aradhan-sub1">
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
-                        </div>
-                        <div class="tile tile-small bg-temple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 m_both">
-                        <div class="tile purple disp-table collapsed" data-toggle="collapse" data-target="#prasad-sub1">
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING
-                                <span class="glyphicon glyphicon-chevron-down block margin-top-small text-xlarge"></span>
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="sub-tiles collapse" id="prasad-sub1">
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                        </div>
-                        <div class="tile tile-small purple disp-table" data-sub-tile>
-                            <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
+                    <div class="row">
+                        <div class="col-xs-12 m_both">
+                            <div class="tile purple disp-table" data-target-menu="#prasad-sub">
+                                <h3 class="title table-cell vert-middle"> PRASAD BOOKING
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

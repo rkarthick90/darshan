@@ -49,6 +49,7 @@ body {
     text-align:center;
     color:#fff;
     font-weight: bold;
+    position: relative;
     .title {
         margin-top: 0px;
     }
@@ -99,7 +100,37 @@ body {
     &.bg-temple{
         background: url(../images/temple.png) center center no-repeat;
         opacity : 0.8;
-        z-index: -1;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-laddu{
+        background: url(../images/laddu.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-kanika{
+        background: url(../images/kanika.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-besan{
+        background: url(../images/besan.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-appam{
+        background: url(../images/appam.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-alu{
+        background: url(../images/alu.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
         border:1px solid #ccc;
     }
 }
@@ -123,8 +154,8 @@ body {
         line-height: 250px;
     }
 }
-.details-panel{
-    background: url('../images/donation.png') center center no-repeat;
+.laddu-img{
+    background: url('../images/laddu.png') center center no-repeat;
     height: 200px;
 }
 
@@ -146,6 +177,11 @@ body {
     .m_both{
         padding-right: 3px;
         padding-left:3px;
+    }
+}
+.menu-layout{
+    .tiles-cont{
+        padding:0;
     }
 }
 .m_btntab{
@@ -231,7 +267,7 @@ body {
   left: 0;
   z-index: 2;
   min-height: 100%;
-  padding: 50px 0 0 0;
+  padding:1px 0 0 0;
   background: #fff;
 }
 
@@ -258,4 +294,27 @@ body {
     text-align: center;
     border-top: 1px solid #ccc;
     padding-top: 22px;
+}
+
+/* language choose section styles*/
+.langpanel{
+    margin:50% auto;
+}
+
+.price-cart{
+    position: absolute;
+    width: 90%;
+    bottom: 6px;
+    left: 10px;
+    .amount{
+        float:left;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+    .cart-btn{
+        float:right;
+        font-size: 10px !important;
+        font-weight: bold;
+        width:auto !important;
+    }
 }
