@@ -100,7 +100,37 @@ body {
     &.bg-temple{
         background: url(../images/temple.png) center center no-repeat;
         opacity : 0.8;
-        z-index: -1;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-laddu{
+        background: url(../images/laddu.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-kanika{
+        background: url(../images/kanika.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-besan{
+        background: url(../images/besan.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-appam{
+        background: url(../images/appam.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
+        border:1px solid #ccc;
+    }
+    &.bg-alu{
+        background: url(../images/alu.png) center center no-repeat;
+        opacity : 0.8;
+        z-index: 1;
         border:1px solid #ccc;
     }
 }
@@ -124,8 +154,8 @@ body {
         line-height: 250px;
     }
 }
-.details-panel{
-    background: url('../images/donation.png') center center no-repeat;
+.laddu-img{
+    background: url('../images/laddu.png') center center no-repeat;
     height: 200px;
 }
 

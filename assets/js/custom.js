@@ -25,20 +25,23 @@ $(document).ready(function(){
         pageRedirect(temp);
     });
 
-    $(document).off('click', '[data-sub-tile]');
-    $(document).on('click', '[data-sub-tile]', function(){
-        var temp = $(this).attr('data-sub-tile');
-        pageRedirect('detail');
+    // $(document).off('click', '[data-sub-tile]');
+    // $(document).on('click', '[data-sub-tile]', function(){
+    //     var temp = $(this).attr('data-sub-tile');
+    // });
+
+    $(document).on('click', '[data-add-cart]', function(e){
+        e.preventDefault();
     });
 
     // language selection
     $(document).off('change', '#selectlang');
     $(document).on('change', '#selectlang', function(){
-        pageRedirect($(this).val())
+        pageRedirect($(this).val());
     });
 
-    $(document).off('click','[data-target]');
-    $(document).on('click','[data-target]', function(){
+    $(document).off('click','[data-target-menu]');
+    $(document).on('click','[data-target-menu]', function(){
         pageRedirect('submenu');
     });
 });
@@ -47,9 +50,6 @@ function pageRedirect(arg){
     switch(arg){
         case 'menu':
             location.href = 'menu.html';
-            break;
-        case 'detail':
-            location.href = "detail.html";
             break;
         case 'English':
             location.href = "login.html";
