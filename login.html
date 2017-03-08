@@ -26,11 +26,11 @@
 	<div class="container">
 		<div class="login-form">
 			<h1 class="title text-center">Welcome</h1>
-			<form id="login-form" method="post" class="form-signin" role="form" onsubmit="call();">
+			<!-- <form id="login-form" method="post" class="form-signin" role="form" onsubmit="call();"> -->
 				<input name="email" id="email" type="email" class="form-control" placeholder="Email address" autofocus>
 				<input name="password" id="password" type="password" class="form-control disable" placeholder="Password">
-				<button class="btn btn-block bt-login" type="submit">Sign In</button>
-			</form>
+				<button class="btn btn-block bt-login" type="submit" onclick="call();">Sign In</button>
+			<!-- </form> -->
 			<div class="form-footer">
 				<div class="row">
 					<div class="col-xs-7 col-sm-7 col-md-7">
@@ -62,10 +62,15 @@
 				$.ajax({
 					type: 'POST',
 					contentType: 'application/json',
-					url: 'http://ec2-54-187-15-155.us-west-2.compute.amazonaws.com:8080/PoCAppServer/signin/user',
+					//url: 'http://ec2-54-187-15-155.us-west-2.compute.amazonaws.com:8080/PoCAppServer/signin/user',
+					url: 'http://localhost:8080/PoCAppServer/signin/user',
 					data: formToJSON(),
 					success: function (data, textStatus, jqXHR) {
-						alert('Stock updated successfully. Status: ' + textStatus);
+						console.log('Stock updated successfully. Status: ' + textStatus + ' Data: ' + data);
+						if(data == true)
+							window.location = 'pages/home.html';
+						else
+							alert("Login failed. Pl. Sign in again");
 					},
 					error: function (jqXHR, textStatus, errorThrown) {
 						alert('update Stock error: ' + textStatus + errorThrown);

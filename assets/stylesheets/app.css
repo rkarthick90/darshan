@@ -927,3 +927,11 @@ body {
 .checkbox-success input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
+
+.perishable {
+	visibility:show;
+}
+
+.nonperishable {
+	visibility:hidden;
+}

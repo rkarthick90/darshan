@@ -1,0 +1,29 @@
+[{
+    "productid": 1,
+    "productname": "laddoo",
+    "perishable": "true",
+    "price": 18,
+    "productdesc": "This is a laddoo",
+    "imagename": "laddoo.png"
+}, {
+    "productid": 2,
+    "productname": "Bhoondi",
+    "perishable": "true",
+    "price": 12,
+    "productdesc": "This is a boondhi",
+    "imagename": "boondhi.png"
+}, {
+    "productid": 3,
+    "productname": "ghee",
+    "perishable": "true",
+    "price": 13,
+    "productdesc": "This is a ghee",
+    "imagename": "ghee.png"
+}, {
+    "productid": 4,
+    "productname": "halva",
+    "perishable": "false",
+    "price": 17,
+    "productdesc": "This is a halwa",
+    "imagename": "halwa.png"
+}]
