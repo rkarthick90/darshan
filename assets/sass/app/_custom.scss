@@ -395,3 +395,23 @@ body {
         padding-bottom:24px;
     }
 }
+.payment-success{
+    text-align: center;
+    margin-top:20px;
+    border:1px solid #ccc;
+    .fa.fa-6{
+        font-size: 8rem;
+    }
+    .pay-msg{
+        font-size: 18px;
+    }
+    .refno{
+        margin-top: 20px;
+        width: 70%;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin-left: auto;
+        padding-bottom: 10px;
+        margin-right: auto;
+    }
+}
