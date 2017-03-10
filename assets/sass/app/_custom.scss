@@ -398,7 +398,8 @@ body {
 .payment-success{
     text-align: center;
     margin-top:20px;
-    border:1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #fff;
     .fa.fa-6{
         font-size: 8rem;
     }
@@ -414,4 +415,9 @@ body {
         padding-bottom: 10px;
         margin-right: auto;
     }
+}
+.img-rotate{
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
 }

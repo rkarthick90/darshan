@@ -430,17 +430,18 @@ body {
 .payment-success {
   text-align: center;
   margin-top: 20px;
-  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  background-color: #fff;
 }
-/* line 402, ../sass/app/_custom.scss */
+/* line 403, ../sass/app/_custom.scss */
 .payment-success .fa.fa-6 {
   font-size: 8rem;
 }
-/* line 405, ../sass/app/_custom.scss */
+/* line 406, ../sass/app/_custom.scss */
 .payment-success .pay-msg {
   font-size: 18px;
 }
-/* line 408, ../sass/app/_custom.scss */
+/* line 409, ../sass/app/_custom.scss */
 .payment-success .refno {
   margin-top: 20px;
   width: 70%;
@@ -449,6 +450,15 @@ body {
   margin-left: auto;
   padding-bottom: 10px;
   margin-right: auto;
+}
+
+/* line 419, ../sass/app/_custom.scss */
+.img-rotate {
+  -ms-transform: rotate(7deg);
+  /* IE 9 */
+  -webkit-transform: rotate(7deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(7deg);
 }
 
 /* helper classes for page */
