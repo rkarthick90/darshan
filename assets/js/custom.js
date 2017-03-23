@@ -32,7 +32,10 @@ $(document).ready(function(){
 
     $(document).on('click', '[data-add-cart]', function(e){
         e.preventDefault();
-        
+        e.stopPropagation();
+        var existvalue = $('[data-order-count]').text();
+        console.log(existvalue)
+        $('[data-order-count]').text(parseInt(existvalue)+1);
     });
 
     // language selection
