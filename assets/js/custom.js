@@ -1,3 +1,4 @@
+var itemArrObj=[];
 $(document).ready(function(){
     // toggle on left side
     $("#menu-toggle").click(function(e) {
@@ -30,12 +31,24 @@ $(document).ready(function(){
     //     var temp = $(this).attr('data-sub-tile');
     // });
 
+    //add cart button from tile itself
+    $(document).off('click', '[data-add-cart]')
     $(document).on('click', '[data-add-cart]', function(e){
         e.preventDefault();
         e.stopPropagation();
+        var cartId = $(this).attr('data-add-cart');
+        console.log(productData[cartId].productname);
+        var item = productData[cartId].productname;
+        var price = productData[cartId].price;
         var existvalue = $('[data-order-count]').text();
-        console.log(existvalue)
         $('[data-order-count]').text(parseInt(existvalue)+1);
+        var itemExistVal = checkItemExist(item); 
+        if(itemExistVal == 'notfound'){
+        	var qty = 1;
+        } else {
+        	var qty = parseInt(itemArrObj[itemExistVal].qty + 1); 
+        }
+        addToCart(item, qty , price);
     });
 
     // language selection
@@ -48,8 +61,89 @@ $(document).ready(function(){
     $(document).on('click','[data-target-menu]', function(){
         pageRedirect('submenu');
     });
+    
+    //When tile click modal get shown with dynamic details
+    $(document).off('click', '[data-sub-tile]')
+    $(document).on('click', '[data-sub-tile]', function(){
+    	var itemId = $(this).attr('data-sub-tile');
+    	console.log("productData", productData[itemId].productname);
+    	var modal = $('#infomodal');
+    	
+    	modal.find("[data-prasad-name]").text(productData[itemId].productname);
+    	modal.find("[data-prasad-desc]").text(productData[itemId].productdesc);
+    	modal.find("[data-prasad-img]").attr('src', productData[itemId].imagename);
+    	modal.find("[data-prasad-price]").text(productData[itemId].price);
+    	modal.modal();
+    });
+
+    //when add to cart icon click from modal this function get called
+    $(document).off('click', '[data-custom-cart]');
+    $(document).on('click', '[data-custom-cart]', function(){
+    	var modal = $('#infomodal');
+    	var table = $('[data-order-list]');
+    	var qty = parseInt(modal.find('#qty').val());
+    	var existvalue = $('[data-order-count]').text();
+    	var item = modal.find("[data-prasad-name]").text();
+    	var price = modal.find("[data-prasad-price]").text();
+    	$('[data-order-count]').text(parseInt(existvalue)+parseInt(qty));
+    	var itemExistVal = checkItemExist(item); 
+        if(itemExistVal == 'notfound'){
+        	var qty = qty;
+        } else {
+        	var qty = parseInt(itemArrObj[itemExistVal].qty + qty); 
+        }
+        addToCart(item, qty , price);
+        modal.modal('hide');
+        $("select").each(function() { this.selectedIndex = 0 });
+    });
+    
+    //when cart icon click this function get called
+    $(document).off('click', '[data-cart]')
+    $(document).on('click', '[data-cart]', function(){
+    	var table = $('[data-order-list]');
+    	table.find('tbody').empty();
+    	var totalPrice = 0;
+        for(var i=0; i<itemArrObj.length; i++){
+        	totalPrice += itemArrObj[i].price;
+    		table.find('tbody').append('<tr><td>'+ itemArrObj[i].name +'</td><td>'+ itemArrObj[i].qty +'</td></tr>')
+    	}
+        $('[data-total-order]').text(totalPrice);
+    });
+    
 });
 
+//reusable for checking item exist
+function checkItemExist(item){
+	if(itemArrObj.length){
+		for(var i=0; i<itemArrObj.length; i++){
+	    	if(itemArrObj[i].name == item){
+	    		return i;
+	    	} 
+	    }
+		return 'notfound';
+	} else {
+		return 'notfound';
+	}
+	
+}
+
+//function for adding items to cart
+function addToCart(item, qty, price) {
+	var itemObj = {};
+    var itemExistVal = checkItemExist(item);
+    
+    if( itemExistVal!= 'notfound'){
+    	itemArrObj[itemExistVal].qty = qty;
+    	itemArrObj[itemExistVal].price = Math.floor(price*qty);
+    } else {
+    	itemObj.name = item;
+        itemObj.qty = qty;
+        itemObj.price = Math.floor(price*qty);
+        itemArrObj.push(itemObj);
+    }
+}
+
+//page redirection based on url
 function pageRedirect(arg){
     switch(arg){
         case 'menu':

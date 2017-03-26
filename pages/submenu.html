@@ -26,7 +26,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body onload="loadProducts();">
     <div class="navmenu navmenu-default navmenu-fixed-right">
         <div class="navmenu-brand text-center bold"> PRASAD ONLINE</div>
         <hr/>
@@ -136,7 +136,7 @@
             </div>
         </div>
         <div class="tabcontent">
-            <div class="container" data-tab-content="Perishable">
+            <div class="container" id="perishTiles" data-tab-content="Perishable">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="bold text-center"> Check service availability </h2>
@@ -147,76 +147,10 @@
                     </div>
                 </div>
                 <div class="tiles-cont">
-                    <div class="sub-tiles" id="test-sub">
-                        <div class="row">
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-laddu disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> LADDU </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-kanika disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> KANIKA </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sub-tiles" id="aradhan-sub">
-                        <div class="row">
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-besan disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> BESAN </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-alu disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> ALU LADDU </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sub-tiles" id="prasad-sub">
-                        <div class="row">
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-appam disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> APPAM </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-laddu disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> LADDU </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
-            <div class="container none" data-tab-content="non-Perishable">
+            <div class="container none" id="nonPerishTiles" data-tab-content="non-Perishable">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="bold text-center"> Check service availability </h2>
@@ -227,73 +161,7 @@
                     </div>
                 </div>
                 <div class="tiles-cont">
-                    <div class="sub-tiles" id="aradhan-sub">
-                        <div class="row">
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small orange disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> ARADHAN 1 </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small orange disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> ARADHAN 2 </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sub-tiles" id="test-sub">
-                        <div class="row">
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-temple disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> DONATION 1 </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small bg-temple disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> DONATION 2 </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sub-tiles" id="prasad-sub">
-                        <div class="row">
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small purple disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 m_both">
-                                <div class="tile tile-small purple disp-table" data-sub-tile data-toggle="modal" data-target="#infomodal">
-                                    <h3 class="title table-cell vert-middle"> PRASAD BOOKING </h3>
-                                    <div class="price-cart">
-                                        <span class="amount"> $ 5.00 </span>
-                                        <a class="btn btn-info cart-btn" data-add-cart> ADD TO CART </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -366,6 +234,7 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+    <script src="../assets/js/products.js"></script>
     <script src="../assets/js/custom.js"></script>
 </body>
 
