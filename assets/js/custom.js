@@ -150,7 +150,7 @@ function pageRedirect(arg){
             location.href = 'menu.html';
             break;
         case 'English':
-            location.href = "login.html";
+            location.href = "pages/home.html";
             break;
         case 'submenu':
             location.href = "submenu.html";
