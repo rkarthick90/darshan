@@ -65,12 +65,12 @@
             </li>
         </ul>
     </div>
-    <div class="navmenu navmenu-default navmenu-fixed-right" id="right">
+    <div class="navmenu navmenu-default navmenu-fixed-right">
         <div class="navmenu-brand text-center bold"> PRASAD ONLINE</div>
         <hr/>
         <p class="bold text-center"> ADDED ITEM(S) IN YOUR CART </p>
         <div class="table-responsive center p-90">
-            <table class="table border-all-none">
+            <table class="table border-all-none" data-order-list>
                 <thead>
                     <tr>
                         <th class="border-all-none pull-left">Items</th>
@@ -87,12 +87,12 @@
         </div>
         <div class="bold center text-large p-90">
             <div class="pull-left"> Total Amount </div>
-            <div class="pull-right"> $ 18.00 </div>
+            <div class="pull-right"> $<span data-total-order> 00</span>.00 </div>
         </div>
         <div class="action-items p-100">
-            <p><a class="btn btn-danger btn-lg p-80" href="payment.html"> CHECK OUT </button></a></p>
-            <p><a class="btn btn-primary btn-lg p-80"> VIEW CART </button></a></p>
-            <p><a class="btn btn-default btn-lg p-80"> ADD MORE </button></a></p>
+            <p><a class="btn btn-danger btn-lg p-80" href="payment.html"> CHECK OUT </a></p>
+            <p><a class="btn btn-primary btn-lg p-80"> VIEW CART </a></p>
+            <p><a class="btn btn-default btn-lg p-80"> ADD MORE </a></p>
         </div>
     </div>
     <div class="canvas">
@@ -116,15 +116,12 @@
                         <div class="navbar-title"> PRASAD ONLINE </div>
                     </div>
                     <div class="col-xs-2 padding-all-zero">
-                        <div class="m_nav-bar navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target="#right" data-canvas=".canvas">
-                            <span class="vert-middle" data-order-count>1</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle"
+                        <div class="m_nav-bar navbar-toggle" data-cart data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+                            <span class="vert-middle" data-order-count>0</span><i class="fa fa-cart-plus text-xlarge text-white vert-middle"
                                 aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-
-                <!-- /.navbar-collapse -->
             </div>
             <!-- /.container -->
         </nav>
@@ -156,7 +153,12 @@
                                     <div class="" id="perishTiles" data-tab-content="Perishable">
                                         <div class="row">
                                             <div class="col-xs-12">
+                                                <h2 class="bold text-center"> Check service availability </h2>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" aria-label="Search">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
                                                 </div>
+                                            </div>
                                         </div>
                                         <div class="tiles-cont">
 
@@ -165,6 +167,11 @@
                                     <div class="none" id="nonPerishTiles" data-tab-content="non-Perishable">
                                         <div class="row">
                                             <div class="col-xs-12">
+                                                <h2 class="bold text-center"> Check service availability </h2>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" aria-label="Search">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="tiles-cont">
@@ -212,7 +219,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="center">
-                        <img alt="img" data-prasad-img>
+                        <img alt="img" class="p-100" data-prasad-img>
                     </div>
                     <div class="container">
                         <div class="row">
@@ -241,8 +248,8 @@
                             </div>
                             <div class="col-xs-6 m_both">
                                 <div class="form-group">
-                                    <label for="exampleInputAmount" class="text-danger">Qty</label>
-                                    <select>
+                                    <label for="qty" class="text-danger">Qty</label>
+                                    <select id="qty">
                                        <option value="1">1</option>
                                        <option value="2">2</option>
                                        <option value="3">3</option>
@@ -264,7 +271,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">ADD TO CART</button>
+                    <button type="button" class="btn btn-primary" data-custom-cart>ADD TO CART</button>
                 </div>
             </div>
         </div>
