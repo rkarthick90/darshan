@@ -3,6 +3,8 @@
  */
 
 var productData;
+var perishableData;
+var nonPerishableData;
 
 $(document).ready(function(){
 	loadProducts();
@@ -17,7 +19,12 @@ function generateTabContent(content, isPerish) {
 		if (i % 2 == 0) {
 			tag += '<div class="sub-tiles" id="test-sub"><div class="row"><div class="col-xs-6 m_both"><div class="tile tile-small bg-laddu disp-table" style="background:url('
 					+ content[i].imagename
-					+ ') center center no-repeat" data-sub-tile="'+i+'" data-toggle="modal" data-target="#infomodal"><h3 class="title table-cell vert-middle"> '
+					+ ') center center no-repeat" ';
+			if(isPerish)
+				tag += 'data-sub-tile';
+			else
+				tag += 'data-sub-tile-non';
+			tag += '="'+i+'" data-toggle="modal" data-target="#infomodal"><h3 class="title table-cell vert-middle"> '
 					+ productName
 					+ ' </h3><div class="price-cart"><span class="amount"> $ '
 					+ content[i].price
@@ -28,7 +35,12 @@ function generateTabContent(content, isPerish) {
 		} else {
 			tag += '<div class="col-xs-6 m_both"><div class="tile tile-small bg-laddu disp-table" style="background:url('
 					+ content[i].imagename
-					+ ') center center no-repeat" data-sub-tile="'+i+'" data-toggle="modal" data-target="#infomodal"><h3 class="title table-cell vert-middle"> '
+					+ ') center center no-repeat" '
+			if(isPerish)
+				tag += 'data-sub-tile';
+			else
+				tag += 'data-sub-tile-non';
+			tag += '="'+i+'" data-toggle="modal" data-target="#infomodal"><h3 class="title table-cell vert-middle"> '
 					+ productName
 					+ ' </h3><div class="price-cart"><span class="amount"> $ '
 					+ content[i].price
@@ -42,11 +54,13 @@ function generateTabContent(content, isPerish) {
 		}
 	}
 	tag += '</div>';
-	// console.log("Product Items "+tag);
-	if(isPerish)
+	if(isPerish) {
+		//console.log("Product Items "+tag);
 		$(tag).insertAfter($("#perishTiles .row"));
-	else
+	} else {
+		//console.log("No Perishable Product Items "+tag);
 		$(tag).insertAfter($("#nonPerishTiles .row"));
+	}
 }
 
 function loadProducts() {
@@ -72,6 +86,8 @@ function loadProducts() {
 							k++;
 						}
 					}
+					perishableData = perish;
+					nonPerishableData = nonPerish;
 					generateTabContent(perish, true);
 					generateTabContent(nonPerish, false);
 					productData = data;
