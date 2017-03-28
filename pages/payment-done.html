@@ -26,93 +26,91 @@
 
 <body>
     <!-- Navigation -->
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="row">
-                <div class="col-xs-2 padding-all-zero">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-xs-8 padding-all-zero">
-                    <div class="navbar-title"> CONFIRMATION </div>
-                </div>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="home.html">Home</a>
-                    </li>
-                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Anand Bazar</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Abodha Bhoga</a></li>
-                            <li><a href="#">Sukhila Bhoga</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Puja Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Arana Daana</a></li>
-                            <li><a href="#">Deepa Daana</a></li>
-                            <li><a href="#">Phoola Daana</a></li>
-                            <li><a href="#">Birthday Puja</a></li>
-                            <li><a href="#">Marriage Puja</a></li>
-                            <li><a href="#">Sastra Puja</a></li>
-                            <li><a href="#">Abahasha Puja</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Temple Info</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Daily Miti</a></li>
-                            <li><a href="#">Jagannath Temple</a></li>
-                            <li><a href="#">Virtual Tour</a></li>
-                            <li><a href="#">Videos Bhajan</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Hundi/Donation</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Donate At Hundi [Tax Return /Affit]</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Buy Mencentile</a>
-                    </li>
+    <div class="navmenu navmenu-default navmenu-fixed-left" id="left">
+        <a class="navmenu-brand" href="#">Prasad Booking</a>
+        <ul class="nav navmenu-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="../login.html">Login</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Anand Bazar</a></b>
+                <ul class="dropdown-menu nav navmenu-nav">
+                    <li><a href="#">Abodha Bhoga</a></li>
+                    <li><a href="#">Sukhila Bhoga</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="container">
-        <div class="payment-success">
-            <div class="panel-body ">
-                <i class="fa fa-check-circle fa-6 text-success" aria-hidden="true"></i>
-                <div class="payment-content">
-                    <h3> Payment Complete </h3>
-                    <p class="pay-msg"> We've sent you an email with all the details of your order &amp; remember you can track your order using this app!</p>
-                    <h4> Order Number:</h4>
-                    <div class="refno">
-                        <h1>#944322341</h1>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Puja Services</a>
+                <ul class="dropdown-menu nav navmenu-nav">
+                    <li><a href="#">Arana Daana</a></li>
+                    <li><a href="#">Deepa Daana</a></li>
+                    <li><a href="#">Phoola Daana</a></li>
+                    <li><a href="#">Birthday Puja</a></li>
+                    <li><a href="#">Marriage Puja</a></li>
+                    <li><a href="#">Sastra Puja</a></li>
+                    <li><a href="#">Abahasha Puja</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Temple Info</a>
+                <ul class="dropdown-menu nav navmenu-nav">
+                    <li><a href="#">Daily Miti</a></li>
+                    <li><a href="#">Jagannath Temple</a></li>
+                    <li><a href="#">Virtual Tour</a></li>
+                    <li><a href="#">Videos Bhajan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Plan to Visit</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="canvas" style="min-height: 92.5vh;">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="row">
+                    <div class="col-xs-2 padding-all-zero">
+                        <div class="navbar-header">
+                            <div class="m_nav-bar navbar-toggle navbar-toggle-left" data-toggle="offcanvas" data-recalc="false" data-target="#left" data-canvas=".canvas">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 padding-all-zero">
+                        <div class="navbar-title"> CONFIRMATION </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <img src="../assets/images/thanks.png" class="img-rotate center p-80">
-    </div>
+            <!-- /.container -->
+        </nav>
 
+        <div class="container">
+            <div class="payment-success">
+                <div class="panel-body ">
+                    <i class="fa fa-check-circle fa-6 text-success" aria-hidden="true"></i>
+                    <div class="payment-content">
+                        <h3> Payment Complete </h3>
+                        <p class="pay-msg"> We've sent you an email with all the details of your order &amp; remember you can track your order
+                            using this app!</p>
+                        <h4> Order Number:</h4>
+                        <div class="refno">
+                            <h1>#944322341</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/images/thanks.png" class="img-rotate center p-80">
+        </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
 </body>
 
