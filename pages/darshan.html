@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Darshan</title>
+
+    <!-- Bootstrap -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- side bar -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../assets/stylesheets/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navmenu navmenu-default navmenu-fixed-left" id="left">
+        <a class="navmenu-brand" href="#">Prasad Booking</a>
+        <ul class="nav navmenu-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="../login.html">Login</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Anand Bazar</a></b>
+                <ul class="dropdown-menu nav navmenu-nav">
+                    <li><a href="#">Abodha Bhoga</a></li>
+                    <li><a href="#">Sukhila Bhoga</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Temple Info</a>
+                <ul class="dropdown-menu nav navmenu-nav">
+                    <li><a href="#">Daily Miti</a></li>
+                    <li><a href="#">Jagannath Temple</a></li>
+                    <li><a href="#">Virtual Tour</a></li>
+                    <li><a href="#">Videos Bhajan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Plan to Visit</a>
+            </li>
+            <li>
+                <a href="#">Merchantise</a>
+            </li>
+        </ul>
+    </div>
+    <div class="canvas">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="row">
+                    <div class="col-xs-2 padding-all-zero">
+                        <div class="navbar-header">
+                            <div class="m_nav-bar navbar-toggle navbar-toggle-left" data-toggle="offcanvas" data-recalc="false" data-target="#left" data-canvas=".canvas">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 padding-all-zero">
+                        <div class="navbar-title"> DARSHAN BOOKING </div>
+                    </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <div class="container">
+            <div class="user-info">
+                <p>
+                    <span>NAME</span>
+                    <span> JOHN DOE </span>
+                </p>
+                <p>
+                    <span>ADDRESS</span>
+                    <span> A. A. ROAD, TAMIL NADU. </span>
+                </p>
+            </div>
+            <div class="darshantab optioncont">
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn btn-default active" role="button" data-tab-btn="general">
+                        <span class="block"> General </span>
+                        <span class="block"> &#8377; 500 </span>
+                    </a>
+                    <a href="#" class="btn btn-default" role="button" data-tab-btn="food">
+                        <span class="block"> Food Spl </span>
+                        <span class="block"> &#8377; 1000 </span>
+                    </a>
+                    <a href="#" class="btn btn-default" role="button" data-tab-btn="previledged">
+                        <span class="block"> Previleged </span>
+                        <span class="block"> &#8377; 3000 </span>
+                    </a>
+                </div>
+                <div class="tabcontent">
+                    <div class="tabs" data-tab-content="general">
+                        <ul>
+                            <li>Bhojana</li>
+                            <li>Deepa</li>
+                            <li>Phoole</li>
+                            <li>chandhan</li>
+                            <li>depisaled</li>
+                            <li>sevagul</li>
+                        </ul>
+                    </div>
+                    <div class="tabs none" data-tab-content="food">
+                        <ul>
+                            <li>Bhojana</li>
+                            <li>Deepa</li>
+                            <li>Phoole</li>
+                            <li>chandhan</li>
+                            <li>depisaled</li>
+                            <li>sevagul</li>
+                        </ul>
+                    </div>
+                    <div class="tabs none" data-tab-content="previledged">
+                        <ul>
+                            <li>Bhojanasdfsd</li>
+                            <li>Deepa</li>
+                            <li>Phoole</li>
+                            <li>chandhan</li>
+                            <li>depisaled</li>
+                            <li>sevagul</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Booking Details
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="visitercount" class="col-xs-5 control-label">No of Visitors</label>
+                            <div class="col-xs-7">
+                                <select id="visitercount" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-xs-5 control-label"> Date </label>
+                            <div class="col-xs-7">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" placeholder="DD" />
+                                    <span class="input-group-btn" style="width:4px;"></span>
+                                    <input type="text" class="form-control input-sm" placeholder="MM" />
+                                    <span class="input-group-btn" style="width:4px;"></span>
+                                    <input type="text" class="form-control input-sm" placeholder="YYYY" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a href="payment.html" class="btn btn-danger btn-lg btn-block" role="button">Pay</a>
+        </div>
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

@@ -341,7 +341,7 @@ body {
   position: relative;
   left: 0;
   z-index: 2;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 1px 0 0 0;
   background: #fff;
 }
@@ -508,6 +508,74 @@ body {
   -webkit-transform: rotate(7deg);
   /* Chrome, Safari, Opera */
   transform: rotate(7deg);
+}
+
+/* line 472, ../sass/app/_custom.scss */
+.darshantab {
+  padding: 0;
+  z-index: 10;
+}
+/* line 475, ../sass/app/_custom.scss */
+.darshantab .btn {
+  padding: 14px 12px !important;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  border-color: #ccc;
+  border-radius: 0;
+}
+/* line 483, ../sass/app/_custom.scss */
+.darshantab .btn.active {
+  background-color: #d9534f;
+  border-color: #ccc;
+}
+
+/* line 490, ../sass/app/_custom.scss */
+.optioncont .tabcontent {
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+/* line 499, ../sass/app/_custom.scss */
+.optioncont .tabcontent .tabs ul li {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 507, ../sass/app/_custom.scss */
+.user-info {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+/* line 511, ../sass/app/_custom.scss */
+.user-info p {
+  margin: 0 !important;
+}
+/* line 513, ../sass/app/_custom.scss */
+.user-info p span {
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+}
+/* line 517, ../sass/app/_custom.scss */
+.user-info p span:first-child {
+  background-color: #333;
+  color: #fff;
+  width: 30%;
+}
+/* line 522, ../sass/app/_custom.scss */
+.user-info p span:last-child {
+  color: #333;
+  width: 68%;
+}
+
+/* line 530, ../sass/app/_custom.scss */
+label[for='visitercount'] {
+  top: 3px;
 }
 
 /* helper classes for page */

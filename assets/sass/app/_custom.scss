@@ -323,7 +323,7 @@ body {
     position: relative;
     left: 0;
     z-index: 2;
-    min-height: 100%;
+    min-height: 100vh;
     padding: 1px 0 0 0;
     background: #fff;
 }
@@ -468,4 +468,65 @@ body {
     -webkit-transform: rotate(7deg);
     /* Chrome, Safari, Opera */
     transform: rotate(7deg);
+}
+.darshantab {
+    padding: 0;
+    z-index: 10;
+    .btn {
+        padding: 14px 12px !important;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color_white;
+        background-color: $color_black;
+        border-color: #ccc;;
+        border-radius: 0;
+        &.active {
+            background-color: $color_red;
+            border-color: #ccc;
+        }
+    }
+}
+
+.optioncont .tabcontent{
+    margin-top:0 !important;
+    margin-bottom:15px !important;
+    border: 1px solid #ccc;
+    padding:15px;
+    background-color: #f9f9f9;
+    .tabs{
+        
+        ul{
+            li{
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.user-info{
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    p {
+        margin:0 !important;
+        span{
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+            &:first-child{
+                background-color: #333;
+                color: #fff;
+                width:30%;
+            }
+            &:last-child{
+                color: #333;
+                width:68%;
+            }
+        }
+    }
+}
+
+label[for='visitercount']{
+    top:3px;
 }

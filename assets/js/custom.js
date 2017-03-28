@@ -20,6 +20,16 @@ $(document).ready(function(){
         $('.tabcontent [data-tab-content="'+clicked+'"]').fadeIn();
     });
     
+    //tab content based on button click
+    $(document).off('click','.optioncont [data-tab-btn]');
+    $(document).on('click','.optioncont [data-tab-btn]', function(){
+        $('[data-tab-btn]').removeClass('active')
+        $(this).addClass('active');
+        var clicked = $(this).attr('data-tab-btn');
+        $('.tabcontent [data-tab-content]').hide();
+        $('.tabcontent [data-tab-content="'+clicked+'"]').show();
+    });
+
     $(document).off('click', '[data-main-tile]');
     $(document).on('click', '[data-main-tile]', function(){
         var temp = $(this).attr('data-main-tile');
@@ -169,6 +179,9 @@ function pageRedirect(arg){
     switch(arg){
         case 'menu':
             location.href = 'menu.html';
+            break;
+        case 'darshan':
+            location.href = 'darshan.html';
             break;
         case 'English':
             location.href = "pages/home.html";
