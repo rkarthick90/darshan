@@ -73,11 +73,6 @@ $(document).ready(function(){
     $(document).on('change', '#selectlang', function(){
         pageRedirect($(this).val());
     });
-
-    $(document).off('click','[data-target-menu]');
-    $(document).on('click','[data-target-menu]', function(){
-        pageRedirect('submenu');
-    });
     
     //When tile click modal get shown with dynamic details for perishable
     $(document).off('click', '[data-sub-tile]')
@@ -140,6 +135,36 @@ $(document).ready(function(){
     	}
         $('[data-total-order]').text(totalPrice);
     });
+
+    $("#Pooja").on('change', function(){
+        var tempval = $(this).val();
+        switch(tempval){
+            case 'Puja 1':
+                $('.pujatab a.pu1').removeClass('hide');
+                $('.pujatab a.pu2').addClass('hide');
+                break;
+            case 'Puja 2':
+                $('.pujatab a.pu2').removeClass('hide');
+                $('.pujatab a.pu1').addClass('hide');
+                break;
+            case 'Puja 3':
+                $('.pujatab a.pu1').removeClass('hide');
+                $('.pujatab a.pu2').addClass('hide');
+                break;
+            case 'Puja 4':
+                $('.pujatab a.pu2').removeClass('hide');
+                $('.pujatab a.pu1').addClass('hide');
+                break;
+            case 'Puja 5':
+                $('.pujatab a.pu1').removeClass('hide');
+                $('.pujatab a.pu2').addClass('hide');
+                break;
+            default:
+                $('.pujatab a.pu2').removeClass('hide');
+                $('.pujatab a.pu1').addClass('hide');
+                break;
+        }
+    });
     
 });
 
@@ -183,11 +208,11 @@ function pageRedirect(arg){
         case 'darshan':
             location.href = 'darshan.html';
             break;
+        case 'puja':
+            location.href = 'puja.html';
+            break;
         case 'English':
             location.href = "pages/home.html";
-            break;
-        case 'submenu':
-            location.href = "submenu.html";
             break;
         default:
             location.href = "/";

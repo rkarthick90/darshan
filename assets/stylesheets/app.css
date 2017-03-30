@@ -511,12 +511,12 @@ body {
 }
 
 /* line 472, ../sass/app/_custom.scss */
-.darshantab {
+.darshantab, .pujatab {
   padding: 0;
   z-index: 10;
 }
 /* line 475, ../sass/app/_custom.scss */
-.darshantab .btn {
+.darshantab .btn, .pujatab .btn {
   padding: 14px 12px !important;
   font-size: 16px;
   font-weight: bold;
@@ -526,7 +526,7 @@ body {
   border-radius: 0;
 }
 /* line 483, ../sass/app/_custom.scss */
-.darshantab .btn.active {
+.darshantab .btn.active, .pujatab .btn.active {
   background-color: #d9534f;
   border-color: #ccc;
 }
@@ -576,6 +576,11 @@ body {
 /* line 530, ../sass/app/_custom.scss */
 label[for='visitercount'] {
   top: 3px;
+}
+
+/* line 534, ../sass/app/_custom.scss */
+#Pooja, .pujatab {
+  margin-bottom: 15px;
 }
 
 /* helper classes for page */

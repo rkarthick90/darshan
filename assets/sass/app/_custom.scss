@@ -469,7 +469,7 @@ body {
     /* Chrome, Safari, Opera */
     transform: rotate(7deg);
 }
-.darshantab {
+.darshantab, .pujatab {
     padding: 0;
     z-index: 10;
     .btn {
@@ -529,4 +529,8 @@ body {
 
 label[for='visitercount']{
     top:3px;
+}
+
+#Pooja, .pujatab{
+    margin-bottom:15px;
 }

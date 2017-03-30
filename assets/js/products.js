@@ -94,10 +94,7 @@ function loadProducts() {
 				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
-				alert("Failure Status " + jqXHR.status);
-				alert("Error Thrown " + errorThrown);
 				var err = eval("(" + jqXHR.responseText + ")");
-				alert(err.Message);
 			}
 
 		});
